@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+      });
+    });
+    
+    $(document).ready(function(){
+      $("#flip2").click(function(){
+        $("#panel2").slideToggle("slow");
+      });
+    });
+    
+    $(document).ready(function(){
+      $("#flip3").click(function(){
+        $("#panel3").slideToggle("slow");
+      });
+    });
+    
+    $(document).ready(function(){
+      $("#flip4").click(function(){
+        $("#panel4").slideToggle("slow");
+      });
+    });
+
+    $(document).ready(function(){
+      $("#flip5").click(function(){
+        $("#panel5").slideToggle("slow");
+      });
+    });
+
+    $(document).ready(function(){
+      $("#flip6").click(function(){
+        $("#panel6").slideToggle("slow");
+      });
+    });
+
+    $(document).ready(function(){
+      $("#flip7").click(function(){
+        $("#panel7").slideToggle("slow");
+      });
+    });
+
+    $(document).ready(function(){
+      $("#flip8").click(function(){
+        $("#panel8").slideToggle("slow");
+      });
+    });
+
+    $(document).ready(function(){
+      $("#flip9").click(function(){
+        $("#panel9").slideToggle("slow");
+      });
+    });
+
+    $(document).ready(function(){
+      $("#flip10").click(function(){
+        $("#panel10").slideToggle("slow");
+      });
+    });
+  </script>
+<title>Input Page</title>
+</head>
+
+<body>
+<div class="divcenterbar">
+  <a href="index.html">
+  <button class="button bg-primary" style="width: 230px;"><span>Main Menu </span></button>
+  </a>
+  <a href="index2.html">
+  <button class="button bg-primary" style="width: 230px;background-color:rgb(101, 41, 61);"><span>Input Page </span></button>
+  </a>
+</div>
+
+<form id="LeftInput">
+<div class="divlefthalf">
+  <h2 class="text-left text-info" style="color:white;">Your information</h2><br>
+    
+  <div id="flip" style="background-color:rgb(196, 80, 98);">Birthday</div>
+  <div id="panel" style="background-color:rgb(196, 80, 98);">
+    <label for="BirthdayLeftInput">Enter Text:</label>
+    <input type="date" id="BirthdayLeftInput" name="BirthdayLeftInput" style="color:black;">
+  </div>
+
+  <div id="flip2" style="background-color:rgb(196, 80, 98);">Ethnicity, Religion</div>
+  <div id="panel2" style="background-color:rgb(196, 80, 98);">
+    <label for="EthnicityLeftInput">Ethnicity:</label>
+    <input id="EthnicityLeftInput" list="ethnicity1" name="EthnicityLeftInput" style="color:black;">
+      <datalist id="ethnicity1">
+        <option value="Native Indonesian">
+        <option value="Chinese Indonesian">
+        <option value="Bugis">
+        <option value="Foreign">
+      </datalist>
+
+    <label for="ReligionLeftInput">Religion:</label>
+    <input id="ReligionLeftInput" list="religion1" name="ReligionLeftInput" style="color:black;">
+    <datalist id="religion1">
+      <option value="Islam">
+      <option value="Catholic">
+      <option value="Christian">
+      <option value="Hindu">
+      <option value="Buddhist">
+    </datalist>
+  </div>
+
+  <div id="flip3" style="background-color:rgb(196, 80, 98);">Work & Financial Status</div>
+  <div id="panel3" style="background-color:rgb(196, 80, 98);">
+    <label for="WorkLeftInput">Work:</label>
+    <input id="WorkLeftInput" list="work1" name="WorkLeftInput" style="color:black;">
+    <datalist id="work1">
+      <option value="Unemployed">
+      <option value="Employed">
+      <option value="Entrepreneur">
+      <option value="Free-lance">
+    </datalist>
+
+    <label for="FinancialLeftInput">Financial Status:</label>
+    <input id="FinancialLeftInput" list="financial1" name="FinancialLeftInput" style="color:black;">
+    <datalist id="financial1">
+      <option value="In-debt">
+      <option value="Less than 3 jt/month">
+      <option value="More than 3 jt/month">
+      <option value="More than 9 jt/month">
+      <option value="Stinkin' rich">
+    </datalist>
+  </div>
+
+  <div id="flip4" style="background-color:rgb(196, 80, 98);">Hobbies & Goals</div>
+  <div id="panel4" style="background-color:rgb(196, 80, 98);">
+    <label for="HobbiesLeftInput">Hobbies:</label>
+    <input id="HobbiesLeftInput" list="hobbies1" name="HobbiesLeftInput" style="color:black;">
+    <datalist id="hobbies1">
+      <option value="Gym">
+      <option value="Being silly">
+      <option value="Reading books">
+      <option value="Badminton">
+      <option value="Sleeping">
+    </datalist>
+
+    <label for="GoalsLeftInput">Goals:</label>
+    <input id="GoalsLeftInput" list="goals1" name="GoalsLeftInput" style="color:black;">
+    <datalist id="goals1">
+      <option value="Fame">
+      <option value="Money">
+      <option value="Happiness">
+      <option value="Memories">
+      <option value="Sleeping">
+    </datalist>
+  </div>
+
+  <div id="flip5" style="background-color:rgb(196, 80, 98);">Personality Type</div>
+  <div id="panel5" style="background-color:rgb(196, 80, 98);">
+    <label for="PersonalityLeftInput">Enter Text:</label>
+    <input type="text" id="PersonalityLeftInput" name="PersonalityLeftInput" style="color:black;">
+  </div>
+</div>
+
+<div class="divrighthalf">
+  <h2 class="text-left" style="color:white;">Your partner's information</h2><br>
+
+  <div id="flip6" style="background-color:rgb(196, 80, 98);">Birthday</div>
+  <div id="panel6" style="background-color:rgb(196, 80, 98);">
+    <label for="BirthdayRightInput">Enter Text:</label>
+    <input type="date" id="BirthdayRightInput" name="BirthdayRightInput" style="color:black;">
+  </div>
+
+  <div id="flip7" style="background-color:rgb(196, 80, 98);">Ethnicity, Religion</div>
+  <div id="panel7" style="background-color:rgb(196, 80, 98);">
+    <label for="EthnicityRightInput">Ethnicity:</label>
+    <input id="EthnicityRightInput" list="ethnicity2" name="EthnicityRightInput" style="color:black;">
+      <datalist id="ethnicity2">
+        <option value="Native Indonesian">
+        <option value="Chinese Indonesian">
+        <option value="Bugis">
+        <option value="Foreign">
+      </datalist>
+
+    <label for="ReligionRightInput">Religion:</label>
+    <input id="ReligionRightInput" list="religion2" name="ReligionRightInput" style="color:black;">
+      <datalist id="religion2">
+        <option value="Islam">
+        <option value="Catholic">
+        <option value="Christian">
+        <option value="Hindu">
+        <option value="Buddhist">
+      </datalist>
+  </div>
+
+  <div id="flip8" style="background-color:rgb(196, 80, 98);">Work & Financial Status</div>
+  <div id="panel8" style="background-color:rgb(196, 80, 98);">
+    <label for="WorkRightInput">Work:</label>
+    <input id="WorkRightInput" list="work1" name="WorkRightInput" style="color:black;">
+      <datalist id="work1">
+        <option value="Unemployed">
+        <option value="Employed">
+        <option value="Entrepreneur">
+        <option value="Free-lance">
+      </datalist>
+
+    <label for="FinancialRightInput">Financial Status:</label>
+    <input id="FinancialRightInput" list="financial1" name="FinancialRightInput" style="color:black;">
+      <datalist id="financial1">
+        <option value="In-debt">
+        <option value="Less than 3 jt/month">
+        <option value="More than 3 jt/month">
+        <option value="More than 9 jt/month">
+        <option value="Stinkin' rich">
+      </datalist>
+  </div>
+
+  <div id="flip9" style="background-color:rgb(196, 80, 98);">Hobbies & Goals</div>
+  <div id="panel9" style="background-color:rgb(196, 80, 98);">
+    <label for="HobbiesRightInput">Hobbies:</label>
+    <input id="HobbiesRightInput" list="hobbies1" name="HobbiesRightInput" style="color:black;">
+    <datalist id="hobbies1">
+      <option value="Gym">
+      <option value="Being silly">
+      <option value="Reading books">
+      <option value="Badminton">
+      <option value="Sleeping">
+    </datalist>
+
+    <label for="GoalsRightInput">Goals:</label>
+    <input id="GoalsRightInput" list="goals1" name="GoalsRightInput" style="color:black;">
+    <datalist id="goals1">
+      <option value="Fame">
+      <option value="Money">
+      <option value="Happiness">
+      <option value="Memories">
+      <option value="Sleeping">
+    </datalist>
+  </div>
+
+  <div id="flip10" style="background-color:rgb(196, 80, 98);">Personality Type</div>
+  <div id="panel10" style="background-color:rgb(196, 80, 98);">
+    <label for="PersonalityRightInput">Enter Text:</label>
+    <input type="text" id="PersonalityRightInput" name="PersonalityRightInput" style="color:black;">
+  </div>
+</div>
+</form>
+
+<div class="divcalculate">
+  <a href="index3.html">
+      <button class="button" style="width: 290px;" onclick="SaveInput()"><span>Calculate! </span></button>
+  </a>
+</div>
+
+
+<script>
+  function SaveInput() {
+    var BirthdayLeftData = document.getElementById('BirthdayLeftInput').value;
+      localStorage.setItem('BirthdayLeftData', BirthdayLeftData);
+
+    var EthnicityLeftData = document.getElementById('EthnicityLeftInput').value;
+      localStorage.setItem('EthnicityLeftData', EthnicityLeftData);
+
+    var ReligionLeftData = document.getElementById('ReligionLeftInput').value;
+      localStorage.setItem('ReligionLeftData', ReligionLeftData);
+
+    var WorkLeftData = document.getElementById('WorkLeftInput').value;
+      localStorage.setItem('WorkLeftData', WorkLeftData);
+
+    var FinancialLeftData = document.getElementById('FinancialLeftInput').value;
+      localStorage.setItem('FinancialLeftData', FinancialLeftData);
+
+    var HobbiesLeftData = document.getElementById('HobbiesLeftInput').value;
+      localStorage.setItem('HobbiesLeftData', HobbiesLeftData);
+
+    var GoalsLeftData = document.getElementById('GoalsLeftInput').value;
+      localStorage.setItem('GoalsLeftData', GoalsLeftData);
+
+    var PersonalityLeftData = document.getElementById('PersonalityLeftInput').value;
+      localStorage.setItem('PersonalityLeftData', PersonalityLeftData);
+
+    var BirthdayRightData = document.getElementById('BirthdayRightInput').value;
+      localStorage.setItem('BirthdayRightData', BirthdayRightData);
+
+    var EthnicityRightData = document.getElementById('EthnicityRightInput').value;
+      localStorage.setItem('EthnicityRightData', EthnicityRightData);
+  
+    var ReligionRightData = document.getElementById('ReligionRightInput').value;
+      localStorage.setItem('ReligionRightData', ReligionRightData);
+
+    var WorkRightData = document.getElementById('WorkRightInput').value;
+      localStorage.setItem('WorkRightData', WorkRightData);
+
+    var FinancialRightData = document.getElementById('FinancialRightInput').value;
+      localStorage.setItem('FinancialRightData', FinancialRightData);
+    
+    var HobbiesRightData = document.getElementById('HobbiesRightInput').value;
+      localStorage.setItem('HobbiesRightData', HobbiesRightData);
+
+    var GoalsRightData = document.getElementById('GoalsRightInput').value;
+      localStorage.setItem('GoalsRightData', GoalsRightData);
+
+    var PersonalityRightData = document.getElementById('PersonalityRightInput').value;
+      localStorage.setItem('PersonalityRightData', PersonalityRightData);
+  }
+</script>
+</body>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday & Age</title>
+</head>
+
+
+<body>
+    <div class="divbanner">
+        <a href="index2.html">
+            <button class="button bg-primary" style="width: 230px;;"><span>Input Page </span></button>
+        </a>
+        <a href="index3.html">
+            <button class="button bg-primary" style="width: 233px;"><span>Birthdays & Age </span></button>
+        </a>
+        <a href="index4.html">
+            <button class="button bg-primary" style="width: 230px;;"><span>Ethnicity & Religion </span></button>
+        </a>
+        <a href="index5.html">
+            <button class="button bg-primary" style="width: 230px;"><span>Financials </span></button>
+        </a>
+        <a href="index6.html">
+            <button class="button bg-primary" style="width: 230px;"><span>Hobbies & Goals</span></button>
+        </a>
+        <a href="index7.html">
+            <button class="button bg-primary" style="width: 230px;background-color:rgb(101, 41, 61)"><span>Personality Type </span></button>
+        </a>
+
+        <h1 class="text-center" style="font-size:100px;color:white;">PERSONALITY TYPE</h1>
+    </div>
+
+    <div class="divlefthalf" id="PersonalityAreaLeft" style="margin-top:310px;width:300px;color:white;"></div>
+    <script>
+        // Display user input on page load
+        var PersonalityLeftData = localStorage.getItem('PersonalityLeftData');
+        if (PersonalityLeftData) {
+            var PersonalityAreaLeft = document.getElementById('PersonalityAreaLeft');
+            PersonalityAreaLeft.innerHTML = '<h2 class="text-left text-info" style="color:white;">Your information:</h2><br>' + '<h3 style="color:white;">' + PersonalityLeftData + '</h3>';
+        }
+    </script>
+
+    <div class="divrighthalf" id="PersonalityAreaRight" style="margin-top:310px;width:300px;"></div>
+    <script>
+        // Display user input on page load
+        var PersonalityRightData = localStorage.getItem('PersonalityRightData');
+        if (PersonalityRightData) {
+            var PersonalityAreaRight = document.getElementById('PersonalityAreaRight');
+            PersonalityAreaRight.innerHTML = '<h2 class="text-left text-info" style="color:white;">Your partners information:</h2><br>' + '<h3 style="color:white;">' + PersonalityRightData + '</h3>';
+        }
+    </script>
+</body>

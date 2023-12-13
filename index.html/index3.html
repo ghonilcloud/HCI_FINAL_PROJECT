@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday & Age</title>
+</head>
+
+
+<body>
+    <div class="divbanner">
+        <a href="index2.html">
+            <button class="button bg-primary" style="width: 230px;"><span>Input Page </span></button>
+        </a>
+        <a href="index3.html">
+            <button class="button bg-primary" style="width: 230px;background-color:rgb(101, 41, 61);"><span>Birthdays & Age </span></button>
+        </a>
+        <a href="index4.html">
+            <button class="button bg-primary" style="width: 230px;"><span>Ethnicity & Religion </span></button>
+        </a>
+        <a href="index5.html">
+            <button class="button bg-primary" style="width: 230px;"><span>Financials </span></button>
+        </a>
+        <a href="index6.html">
+            <button class="button bg-primary" style="width: 230px;"><span>Hobbies & Goals</span></button>
+        </a>
+        <a href="index7.html">
+            <button class="button bg-primary" style="width: 230px;"><span>Personality Type </span></button>
+        </a>
+
+        <h1 class="text-center" style="font-size:100px;color:white;">BIRTHDAYS & AGE</h1>
+    </div>
+
+    <div class="divlefthalf" id="BirthdayAreaLeft" style="margin-top:10px;width:300px;height:200px;color:white;"></div>
+
+    <div class="divrighthalf" id="BirthdayAreaRight" style="margin-top:10px;width:300px;height:200px;"></div>
+
+    <div class="divcenterresult" id="BirthdayResult"></div>
+
+    <script>
+        // Display user input on page load
+        var BirthdayRightData = localStorage.getItem('BirthdayRightData');
+        if (BirthdayRightData) {
+            var BirthdayAreaRight = document.getElementById('BirthdayAreaRight');
+            BirthdayAreaRight.innerHTML = '<h2 class="text-left text-info" style="color:white;">Your partners information:</h2><br>' + '<h3 style="color:white;">' + BirthdayRightData + '</h3>';
+        }
+
+        // Display user input on page load
+        var BirthdayLeftData = localStorage.getItem('BirthdayLeftData');
+        if (BirthdayLeftData) {
+            var BirthdayAreaLeft = document.getElementById('BirthdayAreaLeft');
+            BirthdayAreaLeft.innerHTML = '<h2 class="text-left text-info" style="color:white;">Your information:</h2><br>' + '<h3 style="color:white;">' + BirthdayLeftData + '</h3>';
+        }
+
+        var date1 = new Date(BirthdayLeftData);
+        var date2 = new Date(BirthdayRightData);
+        
+        // To calculate the time difference of two dates
+        var Difference_In_Time = date2.getTime() - date1.getTime();
+        
+        // To calculate the no. of days between two dates
+        var Difference_In_Days = Math.round(Difference_In_Time / (1000 * 3600 * 24));
+        var Difference_In_Days = Math.abs(Difference_In_Days)
+
+        if (Difference_In_Days <= 365){ // Less than 1 year
+            BirthdayChance = "100%"
+        }        
+        else if (Difference_In_Days >= 7300){ // 20 years
+            BirthdayChance = "0%"
+        }        
+        else if (Difference_In_Days >= 3652){ // 10 years
+            BirthdayChance = "40%"
+        }        
+        else if (Difference_In_Days >= 1825){ // 5 years
+            BirthdayChance = "70%"
+        }        
+        else if (Difference_In_Days > 365){ // More than 1 year
+            BirthdayChance = "80%"
+        }        
+        else {
+            BirthdayChance = "0%"
+        }        
+        // To display the final no. of days (result)
+        if (Difference_In_Time) {
+            var BirthdayResult = document.getElementById('BirthdayResult');
+            BirthdayResult.innerHTML = '<h2 class="text-center text-info" style="color:white;margin-bottom:0px;">Your Chances:</h2><br>' + '<h2 style="color:white;">' + BirthdayChance + '</h2>';
+        }
+    </script>
+</body>

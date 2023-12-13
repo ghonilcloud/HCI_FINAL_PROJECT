@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday & Age</title>
+</head>
+
+
+<body>
+    <div class="divbanner">
+        <a href="index2.html">
+            <button class="button bg-primary" style="width: 230px;;"><span>Input Page </span></button>
+        </a>
+        <a href="index3.html">
+            <button class="button bg-primary" style="width: 233px;"><span>Birthdays & Age </span></button>
+        </a>
+        <a href="index4.html">
+            <button class="button bg-primary" style="width: 230px;;"><span>Ethnicity & Religion </span></button>
+        </a>
+        <a href="index5.html">
+            <button class="button bg-primary" style="width: 230px;background-color:rgb(101, 41, 61)"><span>Financials </span></button>
+        </a>
+        <a href="index6.html">
+            <button class="button bg-primary" style="width: 230px;"><span>Hobbies & Goals</span></button>
+        </a>
+        <a href="index7.html">
+            <button class="button bg-primary" style="width: 230px;"><span>Personality Type </span></button>
+        </a>
+
+        <h1 class="text-center" style="font-size:100px;color:white;">FINANCIALS</h1>
+    </div>
+
+    <div class="divlefthalf" id="FinancialAreaLeft" style="margin-top:10px;width:300px;color:white;"></div>
+
+    <div class="divrighthalf" id="FinancialAreaRight" style="margin-top:10px;width:300px;"></div>
+
+    <div class="divcenterresult" id="FinancialResult"></div>
+
+    <script>
+        var WorkRightData = localStorage.getItem('WorkRightData');
+        var FinancialRightData = localStorage.getItem('FinancialRightData');
+        if (WorkRightData) {
+            var FinancialAreaRight = document.getElementById('FinancialAreaRight');
+            FinancialAreaRight.innerHTML = '<h2 class="text-left text-info" style="color:white;">Your partners information:</h2><br>' + '<h3 style="color:white;">' + WorkRightData + '</h3>' + "<br>" +  '<h3 style="color:white;">' + FinancialRightData + '</h3>';
+        }
+
+        var WorkLeftData = localStorage.getItem('WorkLeftData');
+        var FinancialLeftData = localStorage.getItem('FinancialLeftData');
+        if (WorkLeftData) {
+            var FinancialAreaLeft = document.getElementById('FinancialAreaLeft')
+            FinancialAreaLeft.innerHTML = '<h2 class="text-left text-info" style="color:white;">Your information:</h2><br>' + '<h3 style="color:white;">' + WorkLeftData + '</h3>' + "<br>" +  '<h3 style="color:white;">' + FinancialLeftData + '</h3>';
+        }
+
+        if (FinancialLeftData == FinancialRightData){
+            FinancialCount = 50
+        }
+        else {
+            FinancialCount = 0
+        }
+
+        if (WorkLeftData == WorkRightData) {
+            WorkCount = 50
+        }
+        else {
+            WorkCount = 0
+        }
+
+        FinancialDifference = FinancialCount + WorkCount
+
+        if (FinancialRightData) {
+            var FinancialResult = document.getElementById('FinancialResult');
+            FinancialResult.innerHTML = '<h2 class="text-center text-info" style="color:white;margin-bottom:0px;">Your Chances:</h2><br>' + '<h2 style="color:white;">' + FinancialDifference + '%</h2>';
+        }
+    </script>
+</body>

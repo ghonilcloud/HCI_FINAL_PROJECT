@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday & Age</title>
+</head>
+
+
+<body>
+    <div class="divbanner">
+        <a href="index2.html">
+            <button class="button bg-primary" style="width: 230px;;"><span>Input Page </span></button>
+        </a>
+        <a href="index3.html">
+            <button class="button bg-primary" style="width: 233px;"><span>Birthdays & Age </span></button>
+        </a>
+        <a href="index4.html">
+            <button class="button bg-primary" style="width: 230px;;"><span>Ethnicity & Religion </span></button>
+        </a>
+        <a href="index5.html">
+            <button class="button bg-primary" style="width: 230px;"><span>Financials </span></button>
+        </a>
+        <a href="index6.html">
+            <button class="button bg-primary" style="width: 230px;background-color:rgb(101, 41, 61)"><span>Hobbies & Goals</span></button>
+        </a>
+        <a href="index7.html">
+            <button class="button bg-primary" style="width: 230px;"><span>Personality Type </span></button>
+        </a>
+
+        <h1 class="text-center" style="font-size:100px;color:white;">HOBBIES & GOALS</h1>
+    </div>
+
+    <div class="divlefthalf" id="HobbiesAreaLeft" style="margin-top:10px;width:300px;color:white;"></div>
+
+    <div class="divrighthalf" id="HobbiesAreaRight" style="margin-top:10px;width:300px;"></div>
+
+    <div class="divcenterresult" id="HobbiesResult"></div>
+
+    <script>
+        var HobbiesRightData = localStorage.getItem('HobbiesRightData');
+        var GoalsRightData = localStorage.getItem('GoalsRightData');
+        if (HobbiesRightData) {
+            var HobbiesAreaRight = document.getElementById('HobbiesAreaRight');
+            HobbiesAreaRight.innerHTML = '<h2 class="text-left text-info" style="color:white;">Your partners information:</h2><br>' + '<h3 style="color:white;">' + HobbiesRightData + '</h3>' + "<br>" +  '<h3 style="color:white;">' + GoalsRightData + '</h3>';
+        }
+
+        var HobbiesLeftData = localStorage.getItem('HobbiesLeftData');
+        var GoalsLeftData = localStorage.getItem('GoalsLeftData');
+        if (HobbiesLeftData) {
+            var HobbiesAreaLeft = document.getElementById('HobbiesAreaLeft')
+            HobbiesAreaLeft.innerHTML = '<h2 class="text-left text-info" style="color:white;">Your information:</h2><br>' + '<h3 style="color:white;">' + HobbiesLeftData + '</h3>' + "<br>" +  '<h3 style="color:white;">' + GoalsLeftData + '</h3>';
+        }
+
+        if (HobbiesLeftData == HobbiesRightData){
+            HobbiesCount = 50
+        }
+        else {
+            HobbiesCount = 0
+        }
+
+        if (GoalsLeftData == GoalsRightData) {
+            GoalsCount = 50
+        }
+        else {
+            GoalsCount = 0
+        }
+
+        HobbiesDifference = HobbiesCount + GoalsCount
+
+        if (HobbiesRightData) {
+            var HobbiesResult = document.getElementById('HobbiesResult');
+            HobbiesResult.innerHTML = '<h2 class="text-center text-info" style="color:white;margin-bottom:0px;">Your Chances:</h2><br>' + '<h2 style="color:white;">' + HobbiesDifference + '%</h2>';
+        }
+    </script>
+</body>

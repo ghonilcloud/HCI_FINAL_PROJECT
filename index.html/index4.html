@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday & Age</title>
+</head>
+
+
+<body>
+    <div class="divbanner">
+        <a href="index2.html">
+            <button class="button bg-primary" style="width: 230px;;"><span>Input Page </span></button>
+        </a>
+        <a href="index3.html">
+            <button class="button bg-primary" style="width: 233px;"><span>Birthdays & Age </span></button>
+        </a>
+        <a href="index4.html">
+            <button class="button bg-primary" style="width: 230px;background-color:rgb(101, 41, 61);"><span>Ethnicity & Religion </span></button>
+        </a>
+        <a href="index5.html">
+            <button class="button bg-primary" style="width: 230px;"><span>Financials </span></button>
+        </a>
+        <a href="index6.html">
+            <button class="button bg-primary" style="width: 230px;"><span>Hobbies & Goals</span></button>
+        </a>
+        <a href="index7.html">
+            <button class="button bg-primary" style="width: 230px;"><span>Personality Type </span></button>
+        </a>
+
+        <h1 class="text-center" style="font-size:100px;color:white;">ETHNICITY & RELIGION</h1>
+    </div>
+
+    <div class="divlefthalf" id="EthnicityAreaLeft" style="margin-top:10px;height:270px;width:300px;color:white;"></div>
+
+    <div class="divrighthalf" id="EthnicityAreaRight" style="margin-top:10px;height:270px;width:300px;color:white;"></div>
+
+    <div class="divcenterresult" id="EthnicityResult"></div>
+
+    <script>
+        var EthnicityLeftData = localStorage.getItem('EthnicityLeftData');
+        var ReligionLeftData = localStorage.getItem('ReligionLeftData');
+        if (EthnicityLeftData) {
+            var EthnicityAreaLeft = document.getElementById('EthnicityAreaLeft')
+            EthnicityAreaLeft.innerHTML = '<h2 class="text-left text-info" style="color:white;">Your information:</h2><br>' + '<h3 style="color:white;">' + EthnicityLeftData + '</h3>' + "<br>" +  '<h3 style="color:white;">' + ReligionLeftData + '</h3>';
+        }
+
+        var EthnicityRightData = localStorage.getItem('EthnicityRightData');
+        var ReligionRightData = localStorage.getItem('ReligionRightData');
+        if (EthnicityRightData) {
+            var EthnicityAreaRight = document.getElementById('EthnicityAreaRight');
+            EthnicityAreaRight.innerHTML = '<h2 class="text-left text-info" style="color:white;">Partner information:</h2><br>' + '<h3 style="color:white;">' + EthnicityRightData + '</h3>' + "<br>" +  '<h3 style="color:white;">' + ReligionRightData + '</h3>';
+        }
+
+        if (EthnicityLeftData == EthnicityRightData){
+            EthnicityCount = 50
+        }
+        else {
+            EthnicityCount = 0
+        }
+
+        if (ReligionLeftData == ReligionRightData) {
+            ReligionCount = 50
+        }
+        else {
+            ReligionCount = 0
+        }
+
+        EthnicityDifference = EthnicityCount + ReligionCount
+
+        if (EthnicityRightData) {
+            var EthnicityResult = document.getElementById('EthnicityResult');
+            EthnicityResult.innerHTML = '<h2 class="text-center text-info" style="color:white;margin-bottom:0px;">Your Chances:</h2><br>' + '<h2 style="color:white;">' + EthnicityDifference + '%</h2>';
+        }
+    </script>
+</body>

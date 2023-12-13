@@ -1,0 +1,320 @@
+p {
+    padding: 0px;
+    margin: 0px;
+    color:white;
+    font-family:'Open Sans';
+}
+
+body {
+    background-image: url('background.jpg');
+    background-size: 110%;
+    font-family:'Open Sans';
+}
+
+.h1name {
+    text-align: center;
+    color: pink;
+    font-size: 120px;
+    margin: 0px;
+    margin-top: 40px;
+    padding: 0px;
+    font-family:'Open Sans';
+    font-weight: bolder;
+}
+.h2line1 {
+    text-align: center;
+    color: pink;
+    font-size: 30px;
+    margin: 0px;
+    padding: 0px;
+    font-family:'Open Sans';
+}
+.h2line2 {
+    text-align: center;
+    color: pink;
+    font-size: 30px;
+    margin: 0px;
+    margin-bottom: 40px;
+    padding: 0px;
+    font-family:'Open Sans';
+}
+
+div {
+    padding: 15px;
+    text-align: center;
+    font-family:'Open Sans';
+    border-radius: 5%;
+}
+.divleft {
+    background: rgb(152, 62, 92);
+    float: left;
+    margin-left: 40px;
+    width: 420px;
+    height: 390px;
+}
+.divcenter {
+    background: rgb(152, 62, 92);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 420px;
+    height: 390px;
+}
+.divcenterbar {
+    background: rgb(152, 62, 92);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    width: 1300px;
+    height: 95px;
+}
+.divcalculate {
+  background: rgb(152, 62, 92);
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 730px;
+  width: 340px;
+  height: 95px;
+}
+.divstartbar {
+  background: rgb(152, 62, 92);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  margin-top: 40px;
+  width: 340px;
+  height: 95px;
+}
+.divright {
+    background: rgb(152, 62, 92);
+    float: right;
+    margin-right: 40px;
+    width: 420px;
+    height: 390px;
+}
+
+.divrighthalfinput {
+  background: rgb(152, 62, 92);
+  float: right;
+  margin-right: 40px;
+  text-align: left;
+  width: 40%;
+  height: auto;
+}
+.divlefthalfinput {
+  background: rgb(152, 62, 92);
+  float: left;
+  margin-left: 40px;
+  text-align: left;
+  width: 40%;
+  height: auto;
+}
+
+.divrighthalf {
+  background: rgb(152, 62, 92);
+  float: right;
+  margin-right: 40px;
+  text-align: left;
+  width: 40%;
+  height: auto;
+}
+.divlefthalf {
+  background: rgb(152, 62, 92);
+  float: left;
+  margin-left: 40px;
+  text-align: left;
+  width: 40%;
+  height: auto;
+}
+.divcenterresult {
+  background: rgb(152, 62, 92);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 10px;
+  width: 40%;
+  height: 200px;
+  color: white;
+}
+.divbanner {
+  background: rgb(152, 62, 92);
+  display: block;
+  margin-top: 0%;
+  width: 100%;
+  height: 300px;
+  border-radius: 0%;
+  opacity: 1;
+}
+
+.button {
+    border-radius: 10px;
+    border: none;
+    color: #FFFFFF;
+    background-color: rgb(196, 80, 98);
+    text-align: center;
+    font-size: 18px;
+    font-family:'Open Sans';
+    padding: 20px;
+    width: 190px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-bottom: 25px;
+  }
+  
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+  #panel, #flip {
+    padding: 5px;
+    text-align: left;
+    border: solid 1px #c3c3c3;
+    color: white;
+    cursor: pointer;
+  }
+  
+  #panel {
+    padding: 20px;
+    display: none;
+  }
+  
+  #panel2, #flip2 {
+    padding: 5px;
+    text-align: left;
+    border: solid 1px #c3c3c3;
+    color: white;
+    cursor: pointer;
+  }
+  
+  #panel2 {
+    padding: 20px;
+    display: none;
+  }
+  
+  #panel3, #flip3 {
+    padding: 5px;
+    text-align: left;
+    border: solid 1px #c3c3c3;
+    color: white;
+    cursor: pointer;
+  }
+  
+  #panel3 {
+    padding: 20px;
+    display: none;
+  }
+  
+  #panel4, #flip4 {
+    padding: 5px;
+    text-align: left;
+    border: solid 1px #c3c3c3;
+    color: white;
+    cursor: pointer;
+  }
+  
+  #panel4 {
+    padding: 20px;
+    display: none;
+  }
+
+  #panel5, #flip5 {
+    padding: 5px;
+    text-align: left;
+    border: solid 1px #c3c3c3;
+    color: white;
+    cursor: pointer;
+  }
+  
+  #panel5 {
+    padding: 20px;
+    display: none;
+  }
+
+  #panel6, #flip6 {
+    padding: 5px;
+    text-align: left;
+    border: solid 1px #c3c3c3;
+    color: white;
+    cursor: pointer;
+  }
+  
+  #panel6 {
+    padding: 20px;
+    display: none;
+  }
+
+  #panel7, #flip7 {
+    padding: 5px;
+    text-align: left;
+    border: solid 1px #c3c3c3;
+    color: white;
+    cursor: pointer;
+  }
+  
+  #panel7 {
+    padding: 20px;
+    display: none;
+  }
+
+  #panel8, #flip8 {
+    padding: 5px;
+    text-align: left;
+    border: solid 1px #c3c3c3;
+    color: white;
+    cursor: pointer;
+  }
+  
+  #panel8 {
+    padding: 20px;
+    display: none;
+  }
+
+  #panel9, #flip9 {
+    padding: 5px;
+    text-align: left;
+    border: solid 1px #c3c3c3;
+    color: white;
+    cursor: pointer;
+  }
+  
+  #panel9 {
+    padding: 20px;
+    display: none;
+  }
+
+  #panel10, #flip10 {
+    padding: 5px;
+    text-align: left;
+    border: solid 1px #c3c3c3;
+    color: white;
+    cursor: pointer;
+  }
+  
+  #panel10 {
+    padding: 20px;
+    display: none;
+  }
