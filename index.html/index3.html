@@ -64,29 +64,48 @@
         // To calculate the no. of days between two dates
         var Difference_In_Days = Math.round(Difference_In_Time / (1000 * 3600 * 24));
         var Difference_In_Days = Math.abs(Difference_In_Days)
+        
+        // Check if age is under 18
+        // var currentDate = new Date();
+        // var eighteenYearsAgo = new Date(currentDate);
+        // eighteenYearsAgo.setFullYear(currentDate.getFullYear() - 18);
+
+        // if (date1 > eighteenYearsAgo || date2 > eighteenYearsAgo) {
+        //     // Display additional content for age under 18
+        //     var YungContent = "You are under 18 years old. Additional content for minors.";
+        //     // Append this content to BdayContent or display it separately as needed.
+        //     BdayContent += "<br>" + YungContent;
+        // }
 
         if (Difference_In_Days <= 365){ // Less than 1 year
             BirthdayChance = "100%"
+            BdayContent = "For couples with a 100% (less than 1 year) age difference, the shared context of similar ages can lead to a deeper understanding of each other's perspectives. Embracing this alignment can enhance the relationship by providing a common ground for shared experiences and cultural references."
         }        
         else if (Difference_In_Days >= 7300){ // 20 years
             BirthdayChance = "0%"
+            BdayContent = "for couples with a 0% (20 years or more) age difference, while love knows no age, a substantial age gap may bring distinct challenges. Open communication, mutual respect, and early discussions about expectations, concerns, and long-term goals are vital for a harmonious relationship. It's important to be aware of potential generational differences and work together to bridge them"
         }        
         else if (Difference_In_Days >= 3652){ // 10 years
             BirthdayChance = "40%"
+            BdayContent = "a 40% (10 years) age difference, the significant gap may present unique opportunities for learning and growth. Navigating challenges with understanding, patience, and open communication is crucial, as different life stages may lead to varying priorities. "
         }        
         else if (Difference_In_Days >= 1825){ // 5 years
             BirthdayChance = "70%"
+            BdayContent = "A 70% (5 years) age gap can bring a balance of wisdom and youthful energy, offering a richness of experiences while navigating challenges together. Open communication about goals and timelines is essential to ensure alignment in major life decisions."
         }        
         else if (Difference_In_Days > 365){ // More than 1 year
             BirthdayChance = "80%"
+            BdayContent = "for couples with an 80% (more than 1 year) age difference, the noticeable but reasonable gap can be an opportunity to appreciate the blend of youthful energy and accumulated wisdom each partner brings. Celebrating these differences and learning from each other can enrich the relationship."
         }        
         else {
             BirthdayChance = "0%"
+            BdayContent = "for couples with a 0% (20 years or more) age difference, while love knows no age, a substantial age gap may bring distinct challenges. Open communication, mutual respect, and early discussions about expectations, concerns, and long-term goals are vital for a harmonious relationship. It's important to be aware of potential generational differences and work together to bridge them"
         }        
         // To display the final no. of days (result)
         if (Difference_In_Time) {
             var BirthdayResult = document.getElementById('BirthdayResult');
-            BirthdayResult.innerHTML = '<h2 class="text-center text-info" style="color:white;margin-bottom:0px;">Your Chances:</h2><br>' + '<h2 style="color:white;">' + BirthdayChance + '</h2>';
+            BirthdayResult.innerHTML = '<h2 class="text-center text-info" style="color:white;margin-bottom:0px;">Your Chances:</h2><br>' + '<h2 style="color:white;">' + BirthdayChance + '</h2>' + BdayContent;
         }
+        
     </script>
 </body>
