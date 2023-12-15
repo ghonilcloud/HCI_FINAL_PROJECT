@@ -57,23 +57,27 @@
 
         if (EthnicityLeftData == EthnicityRightData){
             EthnicityCount = 50
+            EthCont = 'your ethnicity is of the same type, where you are both' + ' ' + EthnicityLeftData + ' ' + 'and' + ' ' + EthnicityRightData
         }
         else {
             EthnicityCount = 0
+            EthCont = 'your ethnicity is not the same where you are a' + ' ' + EthnicityRightData + ' ' + 'while she is a' + ' ' + EthnicityLeftData
         }
 
         if (ReligionLeftData == ReligionRightData) {
             ReligionCount = 50
+            RelCont = 'your religion is ' + ' ' + ReligionLeftData + ', which is the same as her which is also' + ' ' + ReligionRightData
         }
         else {
             ReligionCount = 0
+            RelCont = 'because both of your religions are not the same, you are' + ' ' + ReligionLeftData + ' ' + 'while she is' + ' ' + ReligionRightData + ' ' + 'Which made you very different and may clash with each other'
         }
 
         EthnicityDifference = EthnicityCount + ReligionCount
 
         if (EthnicityRightData) {
             var EthnicityResult = document.getElementById('EthnicityResult');
-            EthnicityResult.innerHTML = '<h2 class="text-center text-info" style="color:white;margin-bottom:0px;">Your Chances:</h2><br>' + '<h2 style="color:white;">' + EthnicityDifference + '%</h2>';
+            EthnicityResult.innerHTML = '<h2 class="text-center text-info" style="color:white;margin-bottom:0px;">Your Chances:</h2><br>' + '<h2 style="color:white;">' + EthnicityDifference + '%</h2>' + '<br>' + EthCont + '<br>' + '<br>' + RelCont;
         }
     </script>
 </body>
