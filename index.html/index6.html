@@ -59,25 +59,26 @@
             HobbiesAreaLeft.innerHTML = '<h2 class="text-left text-info" style="color:white;">Your information:</h2><br>' + '<h3 style="color:white;">' + HobbiesLeftData + '</h3>' + "<br>" +  '<h3 style="color:white;">' + GoalsLeftData + '</h3>';
         }
 
-        if (HobbiesLeftData == HobbiesRightData){
-            HobbiesCount = randomInt(20, 50)
+        if (HobbiesLeftData == HobbiesRightData && GoalsLeftData == GoalsRightData){
+            ResultCount = randomInt(60, 100)
+            ResultContent = "Having a romantic partner with similar hobbies and goals can offer several advantages. Shared interests create a strong foundation for bonding and spending quality time together. Pursuing common hobbies provides built-in opportunities for shared experiences, enhancing the overall enjoyment of the relationship. Similar goals can align both partners on a path of mutual growth, providing a sense of direction and purpose. This alignment can contribute to effective collaboration and support, as both individuals work towards shared objectives. Additionally, having common hobbies and goals can facilitate smoother communication, fostering a deeper understanding and connection between partners. <br><br> However, there are potential downsides to consider. Over-reliance on shared hobbies and goals may lead to a lack of diversity in experiences, potentially limiting individual growth. It's crucial to ensure that each partner maintains space for personal interests and aspirations to avoid potential feelings of being too enmeshed. Furthermore, if the relationship faces challenges or if one partner's goals change over time, there may be a need for open communication and adaptability to navigate these shifts successfully. Striking a balance between shared activities and individual pursuits is essential for a healthy and sustainable romantic relationship."
+        }
+        else if(GoalsLeftData == GoalsRightData){
+            ResultCount = randomInt(40, 60)
+            ResultContent = "Having a romantic partner with the same goals can be advantageous in various ways. One of the key benefits is the alignment of shared aspirations, which can create a strong sense of purpose and direction in the relationship. Common goals, whether they are related to career, personal development, or lifestyle choices, provide a foundation for mutual support and encouragement. Shared ambitions can also lead to effective collaboration, allowing both partners to work together towards their common objectives. Furthermore, having similar goals may contribute to a more harmonious and fulfilling life together, as both individuals are moving in the same direction. <br><br> However, there are potential downsides to consider. If both partners are intensely focused on their shared goals, there might be a risk of neglecting other aspects of the relationship or individual growth. Additionally, if circumstances change or one person's goals evolve differently from the other's, it could lead to challenges in maintaining alignment. Striking a balance between shared goals and allowing space for individual aspirations is crucial to ensure a healthy and sustainable relationship. <br><br> In summary, while having a romantic partner with the same goals can provide a strong foundation for unity and collaboration, it's essential to navigate the complexities that may arise and maintain a healthy balance between shared objectives and individual growth. Open communication and flexibility are key in addressing challenges and ensuring the long-term success of the relationship."
+        }
+        else if(HobbiesLeftData == HobbiesRightData){
+            ResultCount = randomInt(40, 60)
+            ResultContent = "Having a romantic partner with the same hobbies can bring about numerous benefits. Shared interests create a strong foundation for bonding and quality time spent together, fostering a deep connection. Engaging in activities both partners enjoy can enhance the overall enjoyment of the relationship and contribute to a sense of shared purpose. Common hobbies provide natural opportunities for shared experiences, making it easier to plan enjoyable activities and create lasting memories together. Additionally, shared interests can facilitate smoother communication, as both individuals have a common language around their chosen activities, promoting a sense of understanding and connection. <br><br> However, there are potential downsides to consider. If the relationship becomes solely focused on shared hobbies, there's a risk of limited diversity in experiences and interactions. It's important for each partner to maintain individual interests to ensure a well-rounded and dynamic relationship. Additionally, overly relying on shared hobbies may create challenges if one person's interests evolve or change over time, requiring open communication and flexibility to adapt to shifting preferences. Striking a balance between shared activities and individual pursuits is crucial for a healthy and sustainable romantic relationship."
         }
         else {
-            HobbiesCount = randomInt(0, 20)
+            ResultCount = randomInt(0, 20)
+            ResultContent = "Having a romantic partner with no similar hobbies and goals can present both benefits and challenges. On the positive side, differences in hobbies and goals can bring diversity and novelty to the relationship. Each partner maintains a sense of individuality, pursuing unique interests and personal growth. This diversity can lead to enriching conversations, as each person brings distinct perspectives and experiences to the relationship. Moreover, it allows for mutual support and encouragement in pursuing separate passions, fostering a supportive environment for both partners to thrive as individuals. <br><br> However, there are potential downsides to consider. Without shared hobbies or goals, finding common ground for activities and future plans may require more effort and compromise. Communication might be challenging if there is a lack of understanding or interest in each other's pursuits. Additionally, differing goals may lead to conflicting priorities or aspirations, requiring open and honest communication to navigate potential conflicts and ensure both partners feel fulfilled in the relationship. Striking a balance between individual pursuits and finding ways to connect on shared values or overarching life goals is essential for creating a harmonious and lasting romantic partnership."
         }
-
-        if (GoalsLeftData == GoalsRightData) {
-            GoalsCount = randomInt(20, 50)
-        }
-        else {
-            GoalsCount = randomInt(0, 20)
-        }
-
-        HobbiesDifference = HobbiesCount + GoalsCount
 
         if (HobbiesRightData) {
             var HobbiesResult = document.getElementById('HobbiesResult');
-            HobbiesResult.innerHTML = '<h2 class="text-center text-info" style="color:white;margin-bottom:0px;">Your Chances:</h2><br>' + '<h2 style="color:white;">' + HobbiesDifference + "%" + '</h2>';
+            HobbiesResult.innerHTML = '<h2 class="text-center text-info" style="color:white;margin-bottom:0px;">Your Chances:</h2><br>' + '<h2 style="color:white;">' + ResultCount + "%" + '</h2>' + '<hr>' + '<p class="text-left text-info" style="color:white;margin-bottom:0px;">' + ResultContent + '</p>';
         }
     </script>
 </body>
