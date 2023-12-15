@@ -34,13 +34,17 @@
         <h1 class="text-center" style="font-size:100px;color:white;">HOBBIES & GOALS</h1>
     </div>
 
-    <div class="divlefthalf" id="HobbiesAreaLeft" style="margin-top:10px;width:300px;color:white;"></div>
+    <div class="divlefthalf" id="HobbiesAreaLeft" style="margin-top:10px;height:270px;width:300px;color:white;"></div>
 
-    <div class="divrighthalf" id="HobbiesAreaRight" style="margin-top:10px;width:300px;"></div>
+    <div class="divrighthalf" id="HobbiesAreaRight" style="margin-top:10px;height:270px;width:300px;"></div>
 
     <div class="divcenterresult" id="HobbiesResult"></div>
 
     <script>
+        function randomInt(min, max) { 
+            return Math.floor(Math.random() * (max - min + 1) + min)
+        }
+
         var HobbiesRightData = localStorage.getItem('HobbiesRightData');
         var GoalsRightData = localStorage.getItem('GoalsRightData');
         if (HobbiesRightData) {
@@ -56,24 +60,24 @@
         }
 
         if (HobbiesLeftData == HobbiesRightData){
-            HobbiesCount = 50
+            HobbiesCount = randomInt(20, 50)
         }
         else {
-            HobbiesCount = 0
+            HobbiesCount = randomInt(0, 20)
         }
 
         if (GoalsLeftData == GoalsRightData) {
-            GoalsCount = 50
+            GoalsCount = randomInt(20, 50)
         }
         else {
-            GoalsCount = 0
+            GoalsCount = randomInt(0, 20)
         }
 
         HobbiesDifference = HobbiesCount + GoalsCount
 
         if (HobbiesRightData) {
             var HobbiesResult = document.getElementById('HobbiesResult');
-            HobbiesResult.innerHTML = '<h2 class="text-center text-info" style="color:white;margin-bottom:0px;">Your Chances:</h2><br>' + '<h2 style="color:white;">' + HobbiesDifference + '%</h2>';
+            HobbiesResult.innerHTML = '<h2 class="text-center text-info" style="color:white;margin-bottom:0px;">Your Chances:</h2><br>' + '<h2 style="color:white;">' + HobbiesDifference + '</h2>';
         }
     </script>
 </body>
