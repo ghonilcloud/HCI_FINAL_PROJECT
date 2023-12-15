@@ -41,6 +41,11 @@
     <div class="divcenterresult" id="EthnicityResult"></div>
 
     <script>
+        function randomInt(min, max) { 
+            return Math.floor(Math.random() * (max - min + 1) + min)
+        }
+
+
         var EthnicityLeftData = localStorage.getItem('EthnicityLeftData');
         var ReligionLeftData = localStorage.getItem('ReligionLeftData');
         if (EthnicityLeftData) {
@@ -55,25 +60,22 @@
             EthnicityAreaRight.innerHTML = '<h2 class="text-left text-info" style="color:white;">Partner information:</h2><br>' + '<h3 style="color:white;">' + EthnicityRightData + '</h3>' + "<br>" +  '<h3 style="color:white;">' + ReligionRightData + '</h3>';
         }
 
-        if (EthnicityLeftData == EthnicityRightData){
-            EthnicityCount = 50
+        if (EthnicityLeftData == EthnicityRightData && ReligionLeftData == ReligionRightData){
+            ResultCount = randomInt(70, 100)
+        }
+        else if (EthnicityLeftData == EthnicityRightData){
+            ResultCount = randomInt(20, 60)
+        }
+        else if (ReligionLeftData == ReligionRightData){
+            ResultCount = randomInt(20, 60)
         }
         else {
-            EthnicityCount = 0
+            ResultCount = randomInt(0, 20)
         }
-
-        if (ReligionLeftData == ReligionRightData) {
-            ReligionCount = 50
-        }
-        else {
-            ReligionCount = 0
-        }
-
-        EthnicityDifference = EthnicityCount + ReligionCount
 
         if (EthnicityRightData) {
             var EthnicityResult = document.getElementById('EthnicityResult');
-            EthnicityResult.innerHTML = '<h2 class="text-center text-info" style="color:white;margin-bottom:0px;">Your Chances:</h2><br>' + '<h2 style="color:white;">' + EthnicityDifference + '%</h2>';
+            EthnicityResult.innerHTML = '<h2 class="text-center text-info" style="color:white;margin-bottom:0px;">Your Chances:</h2><br>' + '<h2 style="color:white;">' + ResultCount + '</h2>';
         }
     </script>
 </body>
