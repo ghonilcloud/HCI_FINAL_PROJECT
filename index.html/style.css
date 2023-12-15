@@ -136,7 +136,7 @@ div {
   text-align: center;
   margin-top: 10px;
   width: 40%;
-  height: 200px;
+  height: auto;
   color: white;
 }
 .divbanner {
