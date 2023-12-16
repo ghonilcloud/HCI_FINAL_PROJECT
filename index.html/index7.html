@@ -3,92 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Birthday & Age</title>
 </head>
 
-
 <body>
-    <div class="divbanner">
-        <a href="index2.html">
-            <button class="button bg-primary" style="width: 230px;;"><span>Input Page </span></button>
-        </a>
-        <a href="index3.html">
-            <button class="button bg-primary" style="width: 233px;"><span>Birthdays & Age </span></button>
-        </a>
-        <a href="index4.html">
-            <button class="button bg-primary" style="width: 230px;;"><span>Ethnicity & Religion </span></button>
-        </a>
-        <a href="index5.html">
-            <button class="button bg-primary" style="width: 230px;"><span>Financials </span></button>
-        </a>
-        <a href="index6.html">
-            <button class="button bg-primary" style="width: 230px;"><span>Hobbies & Goals</span></button>
-        </a>
-        <a href="index7.html">
-            <button class="button bg-primary" style="width: 230px;background-color:rgb(101, 41, 61)"><span>Personality Type </span></button>
-        </a>
+<div class="divbanner">
+    <a href="index2.html">
+        <button class="button bg-primary"><span>Input Page </span></button>
+    </a>
+    <a href="index3.html">
+        <button class="button bg-primary"><span>Birthdays & Age </span></button>
+    </a>
+    <a href="index4.html">
+        <button class="button bg-primary"><span>Ethnicity & Religion </span></button>
+    </a>
+    <a href="index5.html">
+        <button class="button bg-primary"><span>Financials </span></button>
+    </a>
+    <a href="index6.html">
+        <button class="button bg-primary"><span>Hobbies & Goals</span></button>
+    </a>
+    <a href="index7.html">
+        <button class="button bg-primary" style="background-color:rgb(101, 41, 61)"><span>Personality Type </span></button>
+    </a>
 
-        <h1 class="text-center" style="font-size:100px;color:white;">PERSONALITY TYPE</h1>
-    </div>
+    <h1 class="text-center">PERSONALITY TYPE</h1>
+</div>
 
-    <div class="divlefthalf" id="PersonalityAreaLeft" style="margin-top:310px;width:300px;color:white;"></div>
-    <script>
-        // Display user input on page load
-        var PersonalityLeftData = localStorage.getItem('PersonalityLeftData');
-        if (PersonalityLeftData) {
-            var PersonalityAreaLeft = document.getElementById('PersonalityAreaLeft');
-            PersonalityAreaLeft.innerHTML = '<h2 class="text-left text-info" style="color:white;">Your information:</h2><br>' + '<h3 style="color:white;">' + PersonalityLeftData + '</h3>';
-        }
-    </script>
+<div class="divlefthalf" id="PersonalityAreaLeft"></div>
 
-    <div class="divrighthalf" id="PersonalityAreaRight" style="margin-top:310px;width:300px;"></div>
-    <script>
-        // Display user input on page load
-        var PersonalityRightData = localStorage.getItem('PersonalityRightData');
-        if (PersonalityRightData) {
-            var PersonalityAreaRight = document.getElementById('PersonalityAreaRight');
-            PersonalityAreaRight.innerHTML = '<h2 class="text-left text-info" style="color:white;">Your partners information:</h2><br>' + '<h3 style="color:white;">' + PersonalityRightData + '</h3>';
-        }
-    </script>
-    <div class="divcenterresult" id="PersonalityResult"></div>
-    <script>
-        var PersonalityLeftData = localStorage.getItem('PersonalityLeftData');
-        var PersonalityRightData = localStorage.getItem('PersonalityRightData');
-    
-        if (PersonalityLeftData && PersonalityRightData) {
-            // Define compatible and incompatible MBTI pairs
-            var compatiblePairs = {
-                'INTJ': ['ENTJ', 'ENTP', 'ENFP', 'ESTP', 'ESFP', 'ISTP', 'INTP'],
-                'INFP': ['ENFJ', 'ENFP', 'INFJ', 'INFP', 'INTJ', 'INTP', 'ISFJ', 'ISFP'],
-                'ENFP': ['ENFJ', 'ENFP', 'INFJ', 'INFP', 'INTJ', 'INTP', 'ISFJ', 'ISFP'],
-                'ENTJ': ['ENTJ', 'ENTP', 'ESTJ', 'ESTP', 'INTJ', 'ISTJ', 'ISTP', 'ISFJ'],
-                'INFJ': ['ENFJ', 'ENFP', 'INFJ', 'INFP', 'INTJ', 'INTP', 'ISFJ', 'ISFP'],
-                'ENFJ': ['ENFJ', 'ENFP', 'INFJ', 'INFP', 'INTJ', 'INTP', 'ISFJ', 'ISFP'],
-                'INTP': ['ENTJ', 'ENTP', 'ENFP', 'ESTP', 'ESFP', 'ISTP', 'INTP'],
-                'ENTP': ['ENTJ', 'ENTP', 'ENFP', 'ESTP', 'ESFP', 'ISTP', 'INTP'],
-                'ISFJ': ['ENFJ', 'ESFJ', 'ISFJ', 'ISFP', 'ISTJ', 'INFJ', 'INFP', 'INTJ'],
-                'ESFJ': ['ENFJ', 'ESFJ', 'ISFJ', 'ISFP', 'ISTJ', 'INFJ', 'INFP', 'INTJ'],
-                'ISTJ': ['ENTJ', 'ESFJ', 'ISTJ', 'ISFJ', 'ISTP', 'INFJ', 'INTJ', 'ISFP'],
-                'ESTJ': ['ENTJ', 'ESFJ', 'ISTJ', 'ISFJ', 'ISTP', 'INFJ', 'INTJ', 'ISFP'],
-                'ISTP': ['ESTP', 'ISTP', 'ESFP', 'ISFP', 'ESTJ', 'ISTJ', 'ENFP', 'INFP', 'ENTP', 'INTP', 'ENTJ', 'INTJ'],
-                'ESTP': ['ESTP', 'ISTP', 'ESFP', 'ISFP', 'ESTJ', 'ISTJ', 'ENFP', 'INFP', 'ENTP', 'INTP', 'ENTJ', 'INTJ'],
-                'ISFP': ['ESTP', 'ISTP', 'ESFP', 'ISFP', 'ESTJ', 'ISTJ', 'ENFP', 'INFP', 'ENTP', 'INTP', 'ENTJ', 'INTJ'],
-                'ESFP': ['ESTP', 'ISTP', 'ESFP', 'ISFP', 'ESTJ', 'ISTJ', 'ENFP', 'INFP', 'ENTP', 'INTP', 'ENTJ', 'INTJ']
-            };
-    
-            // Check compatibility
-            var compatibility = 'Not Compatible';
-            if (compatiblePairs[PersonalityLeftData]?.includes(PersonalityRightData)) {
-                compatibility = 'Compatible';
-            }
-    
-            if (compatibility) {
-            var PersonalityResult = document.getElementById('PersonalityResult');
-            PersonalityResult.innerHTML = '<h2 class="text-center text-info" style="color:white;margin-bottom:0px;">Your Chances:</h2><br>' + '<h2 style="color:white;">' + compatibility + '</h2>' ;
-        }
-        }
-    </script>
+<div class="divrighthalf" id="PersonalityAreaRight" ></div>
+
+<div class="divcenterresult" id="PersonalityResult"></div>
+
+<div class="divoverall">
+    <a href="index8.html">
+        <button class="button" style="width: 290px;" onclick="SaveInput()"><span>Overall Average </span></button>
+    </a>
+</div>
 </body>
+
+<script>
+// Display user input on page load
+var PersonalityLeftData = localStorage.getItem('PersonalityLeftData');
+if (PersonalityLeftData) {
+    var PersonalityAreaLeft = document.getElementById('PersonalityAreaLeft');
+    PersonalityAreaLeft.innerHTML = '<h2 class="text-left text-info" style="color:white;">Your information:</h2><br>' + '<h3 style="color:white;">' + PersonalityLeftData + '</h3>';
+}
+
+// Display user input on page load
+var PersonalityRightData = localStorage.getItem('PersonalityRightData');
+if (PersonalityRightData) {
+    var PersonalityAreaRight = document.getElementById('PersonalityAreaRight');
+    PersonalityAreaRight.innerHTML = '<h2 class="text-left text-info" style="color:white;">Your partners information:</h2><br>' + '<h3 style="color:white;">' + PersonalityRightData + '</h3>';
+}
+
+var PersonalityLeftData = localStorage.getItem('PersonalityLeftData');
+var PersonalityRightData = localStorage.getItem('PersonalityRightData');
+
+if (PersonalityLeftData && PersonalityRightData) {
+    // Define compatible and incompatible MBTI pairs
+    var compatiblePairs = {
+        'INTJ': ['ENTJ', 'ENTP', 'ENFP', 'ESTP', 'ESFP', 'ISTP', 'INTP'],
+        'INFP': ['ENFJ', 'ENFP', 'INFJ', 'INFP', 'INTJ', 'INTP', 'ISFJ', 'ISFP'],
+        'ENFP': ['ENFJ', 'ENFP', 'INFJ', 'INFP', 'INTJ', 'INTP', 'ISFJ', 'ISFP'],
+        'ENTJ': ['ENTJ', 'ENTP', 'ESTJ', 'ESTP', 'INTJ', 'ISTJ', 'ISTP', 'ISFJ'],
+        'INFJ': ['ENFJ', 'ENFP', 'INFJ', 'INFP', 'INTJ', 'INTP', 'ISFJ', 'ISFP'],
+        'ENFJ': ['ENFJ', 'ENFP', 'INFJ', 'INFP', 'INTJ', 'INTP', 'ISFJ', 'ISFP'],
+        'INTP': ['ENTJ', 'ENTP', 'ENFP', 'ESTP', 'ESFP', 'ISTP', 'INTP'],
+        'ENTP': ['ENTJ', 'ENTP', 'ENFP', 'ESTP', 'ESFP', 'ISTP', 'INTP'],
+        'ISFJ': ['ENFJ', 'ESFJ', 'ISFJ', 'ISFP', 'ISTJ', 'INFJ', 'INFP', 'INTJ'],
+        'ESFJ': ['ENFJ', 'ESFJ', 'ISFJ', 'ISFP', 'ISTJ', 'INFJ', 'INFP', 'INTJ'],
+        'ISTJ': ['ENTJ', 'ESFJ', 'ISTJ', 'ISFJ', 'ISTP', 'INFJ', 'INTJ', 'ISFP'],
+        'ESTJ': ['ENTJ', 'ESFJ', 'ISTJ', 'ISFJ', 'ISTP', 'INFJ', 'INTJ', 'ISFP'],
+        'ISTP': ['ESTP', 'ISTP', 'ESFP', 'ISFP', 'ESTJ', 'ISTJ', 'ENFP', 'INFP', 'ENTP', 'INTP', 'ENTJ', 'INTJ'],
+        'ESTP': ['ESTP', 'ISTP', 'ESFP', 'ISFP', 'ESTJ', 'ISTJ', 'ENFP', 'INFP', 'ENTP', 'INTP', 'ENTJ', 'INTJ'],
+        'ISFP': ['ESTP', 'ISTP', 'ESFP', 'ISFP', 'ESTJ', 'ISTJ', 'ENFP', 'INFP', 'ENTP', 'INTP', 'ENTJ', 'INTJ'],
+        'ESFP': ['ESTP', 'ISTP', 'ESFP', 'ISFP', 'ESTJ', 'ISTJ', 'ENFP', 'INFP', 'ENTP', 'INTP', 'ENTJ', 'INTJ']
+};
+
+// Check compatibility
+var compatibility = 'Not Compatible';
+ResultContent = "Having incompatible MBTI (Myers-Briggs Type Indicator) personalities in relationships or team settings can present various challenges. Firstly, communication breakdowns are common when individuals with disparate personality types interact. Differences in communication styles, decision-making processes, and approaches to problem-solving may lead to misunderstandings, frustration, and difficulty in conveying ideas effectively. These challenges can hinder collaboration and contribute to a less productive and harmonious environment. <br><br> Secondly, in team settings, incompatible MBTI personalities may result in difficulties in achieving consensus and cohesive decision-making. Divergent preferences in Extraversion/Introversion, Sensing/Intuition, Thinking/Feeling, and Judging/Perceiving can lead to conflicting priorities and strategies. This lack of alignment may impede progress, hinder creativity, and create tension within the team. <br><br> Thirdly, in personal relationships, incompatible MBTI personalities may lead to ongoing misunderstandings and conflicts. Differences in values, communication styles, and approaches to handling emotions can strain the relationship. Without a shared understanding of each other's preferences, individuals may find it challenging to meet each other's needs and may struggle to build the necessary empathy and mutual respect that underpin successful relationships. <br><br> It's important to note that while MBTI can provide insights into personality preferences, it has its limitations, and successful relationships often require effective communication, compromise, and an appreciation for each other's unique qualities, regardless of personality type.";
+
+if (compatiblePairs[PersonalityLeftData]?.includes(PersonalityRightData)) {
+    compatibility = 'Compatible';
+    ResultContent = "Having compatible MBTI (Myers-Briggs Type Indicator) personalities in interpersonal relationships can yield several significant benefits. Firstly, compatibility in personality types often leads to enhanced communication. Individuals with similar preferences in Extraversion/Introversion, Sensing/Intuition, Thinking/Feeling, and Judging/Perceiving are more likely to understand and appreciate each other's communication styles, reducing misunderstandings and fostering a smoother flow of ideas and information. <br><br> Secondly, compatible MBTI personalities contribute to effective collaboration and teamwork. When team members share similar preferences in how they approach tasks and make decisions, they can align more easily on goals and strategies. This shared understanding helps create a cohesive and efficient working environment, where individuals complement each other's strengths and work together harmoniously toward common objectives. <br><br> Thirdly, compatible MBTI personalities can lead to a more supportive and harmonious social environment. In personal relationships, compatibility in personality types often results in a deeper understanding of each other's needs, values, and motivations. This understanding forms the basis for empathy and mutual respect, creating a positive and supportive atmosphere that fosters personal growth and strengthens the bond between individuals. <br><br> While compatibility in MBTI personalities can contribute positively to relationships and collaboration, it's essential to recognize that successful relationships also involve a degree of flexibility, adaptability, and open communication to navigate differences and challenges that may arise.";
+}
+
+if (compatibility) {
+    var PersonalityResult = document.getElementById('PersonalityResult');
+    PersonalityResult.innerHTML = '<h2 class="text-center text-info" style="color:white;margin-bottom:0px;">Your Personalities are</h2><br>' + '<h2 style="color:white;">' + compatibility + '</h2>' + '<hr>' + '<p class="text-left text-info" style="color:white;margin-bottom:0px;">' + ResultContent + '</p>';;
+}
+}
+
+localStorage.setItem('PersonalityResult', compatibility);
+</script>
