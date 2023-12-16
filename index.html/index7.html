@@ -34,7 +34,7 @@
         <h1 class="text-center" style="font-size:100px;color:white;">PERSONALITY TYPE</h1>
     </div>
 
-    <div class="divlefthalf" id="PersonalityAreaLeft" style="margin-top:10px;width:300px;height:270px;color:white;"></div>
+    <div class="divlefthalf" id="PersonalityAreaLeft" style="margin-top:310px;width:300px;color:white;"></div>
     <script>
         // Display user input on page load
         var PersonalityLeftData = localStorage.getItem('PersonalityLeftData');
@@ -44,13 +44,51 @@
         }
     </script>
 
-    <div class="divrighthalf" id="PersonalityAreaRight" style="margin-top:10px;width:300px;height:270px;color:white;"></div>
+    <div class="divrighthalf" id="PersonalityAreaRight" style="margin-top:310px;width:300px;"></div>
     <script>
         // Display user input on page load
         var PersonalityRightData = localStorage.getItem('PersonalityRightData');
         if (PersonalityRightData) {
             var PersonalityAreaRight = document.getElementById('PersonalityAreaRight');
             PersonalityAreaRight.innerHTML = '<h2 class="text-left text-info" style="color:white;">Your partners information:</h2><br>' + '<h3 style="color:white;">' + PersonalityRightData + '</h3>';
+        }
+    </script>
+    <div class="divcenterresult" id="PersonalityResult"></div>
+    <script>
+        var PersonalityLeftData = localStorage.getItem('PersonalityLeftData');
+        var PersonalityRightData = localStorage.getItem('PersonalityRightData');
+    
+        if (PersonalityLeftData && PersonalityRightData) {
+            // Define compatible and incompatible MBTI pairs
+            var compatiblePairs = {
+                'INTJ': ['ENTJ', 'ENTP', 'ENFP', 'ESTP', 'ESFP', 'ISTP', 'INTP'],
+                'INFP': ['ENFJ', 'ENFP', 'INFJ', 'INFP', 'INTJ', 'INTP', 'ISFJ', 'ISFP'],
+                'ENFP': ['ENFJ', 'ENFP', 'INFJ', 'INFP', 'INTJ', 'INTP', 'ISFJ', 'ISFP'],
+                'ENTJ': ['ENTJ', 'ENTP', 'ESTJ', 'ESTP', 'INTJ', 'ISTJ', 'ISTP', 'ISFJ'],
+                'INFJ': ['ENFJ', 'ENFP', 'INFJ', 'INFP', 'INTJ', 'INTP', 'ISFJ', 'ISFP'],
+                'ENFJ': ['ENFJ', 'ENFP', 'INFJ', 'INFP', 'INTJ', 'INTP', 'ISFJ', 'ISFP'],
+                'INTP': ['ENTJ', 'ENTP', 'ENFP', 'ESTP', 'ESFP', 'ISTP', 'INTP'],
+                'ENTP': ['ENTJ', 'ENTP', 'ENFP', 'ESTP', 'ESFP', 'ISTP', 'INTP'],
+                'ISFJ': ['ENFJ', 'ESFJ', 'ISFJ', 'ISFP', 'ISTJ', 'INFJ', 'INFP', 'INTJ'],
+                'ESFJ': ['ENFJ', 'ESFJ', 'ISFJ', 'ISFP', 'ISTJ', 'INFJ', 'INFP', 'INTJ'],
+                'ISTJ': ['ENTJ', 'ESFJ', 'ISTJ', 'ISFJ', 'ISTP', 'INFJ', 'INTJ', 'ISFP'],
+                'ESTJ': ['ENTJ', 'ESFJ', 'ISTJ', 'ISFJ', 'ISTP', 'INFJ', 'INTJ', 'ISFP'],
+                'ISTP': ['ESTP', 'ISTP', 'ESFP', 'ISFP', 'ESTJ', 'ISTJ', 'ENFP', 'INFP', 'ENTP', 'INTP', 'ENTJ', 'INTJ'],
+                'ESTP': ['ESTP', 'ISTP', 'ESFP', 'ISFP', 'ESTJ', 'ISTJ', 'ENFP', 'INFP', 'ENTP', 'INTP', 'ENTJ', 'INTJ'],
+                'ISFP': ['ESTP', 'ISTP', 'ESFP', 'ISFP', 'ESTJ', 'ISTJ', 'ENFP', 'INFP', 'ENTP', 'INTP', 'ENTJ', 'INTJ'],
+                'ESFP': ['ESTP', 'ISTP', 'ESFP', 'ISFP', 'ESTJ', 'ISTJ', 'ENFP', 'INFP', 'ENTP', 'INTP', 'ENTJ', 'INTJ']
+            };
+    
+            // Check compatibility
+            var compatibility = 'Not Compatible';
+            if (compatiblePairs[PersonalityLeftData]?.includes(PersonalityRightData)) {
+                compatibility = 'Compatible';
+            }
+    
+            if (compatibility) {
+            var PersonalityResult = document.getElementById('PersonalityResult');
+            PersonalityResult.innerHTML = '<h2 class="text-center text-info" style="color:white;margin-bottom:0px;">Your Chances:</h2><br>' + '<h2 style="color:white;">' + compatibility + '</h2>' ;
+        }
         }
     </script>
 </body>
