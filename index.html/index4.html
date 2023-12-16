@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Birthday & Age</title>
@@ -13,30 +13,30 @@
 <body>
     <div class="divbanner">
         <a href="index2.html">
-            <button class="button bg-primary" style="width: 230px;;"><span>Input Page </span></button>
+            <button class="button bg-primary"><span>Input Page </span></button>
         </a>
         <a href="index3.html">
-            <button class="button bg-primary" style="width: 233px;"><span>Birthdays & Age </span></button>
+            <button class="button bg-primary"><span>Birthdays & Age </span></button>
         </a>
         <a href="index4.html">
-            <button class="button bg-primary" style="width: 230px;background-color:rgb(101, 41, 61);"><span>Ethnicity & Religion </span></button>
+            <button class="button bg-primary" style="background-color:rgb(101, 41, 61);"><span>Ethnicity & Religion </span></button>
         </a>
         <a href="index5.html">
-            <button class="button bg-primary" style="width: 230px;"><span>Financials </span></button>
+            <button class="button bg-primary"><span>Financials </span></button>
         </a>
         <a href="index6.html">
-            <button class="button bg-primary" style="width: 230px;"><span>Hobbies & Goals</span></button>
+            <button class="button bg-primary"><span>Hobbies & Goals</span></button>
         </a>
         <a href="index7.html">
-            <button class="button bg-primary" style="width: 230px;"><span>Personality Type </span></button>
+            <button class="button bg-primary"><span>Personality Type </span></button>
         </a>
 
-        <h1 class="text-center" style="font-size:100px;color:white;">ETHNICITY & RELIGION</h1>
+        <h1 class="text-center">ETHNICITY & RELIGION</h1>
     </div>
 
-    <div class="divlefthalf" id="EthnicityAreaLeft" style="margin-top:10px;height:270px;width:300px;color:white;"></div>
+    <div class="divlefthalf" id="EthnicityAreaLeft"></div>
 
-    <div class="divrighthalf" id="EthnicityAreaRight" style="margin-top:10px;height:270px;width:300px;color:white;"></div>
+    <div class="divrighthalf" id="EthnicityAreaRight"></div>
 
     <div class="divcenterresult" id="EthnicityResult"></div>
 
@@ -44,7 +44,6 @@
         function randomInt(min, max) { 
             return Math.floor(Math.random() * (max - min + 1) + min)
         }
-
 
         var EthnicityLeftData = localStorage.getItem('EthnicityLeftData');
         var ReligionLeftData = localStorage.getItem('ReligionLeftData');
@@ -81,5 +80,7 @@
             var EthnicityResult = document.getElementById('EthnicityResult');
             EthnicityResult.innerHTML = '<h2 class="text-center text-info" style="color:white;margin-bottom:0px;">Your Chances:</h2><br>' + '<h2 style="color:white;">' + ResultCount + "%" + '</h2>' + '<hr>' + '<p class="text-left text-info" style="color:white;margin-bottom:0px;">' + ResultContent + '</p>';
         }
+
+        localStorage.setItem('EthnicityResult', ResultCount);
     </script>
 </body>
