@@ -5,10 +5,19 @@ p {
     font-family:'Open Sans';
 }
 
+h1 {
+  font-size:100px;
+  color:white;
+}
+
 body {
     background-image: url('background.jpg');
     background-size: 110%;
     font-family:'Open Sans';
+}
+
+input {
+  width: 90%;
 }
 
 .h1name {
@@ -66,17 +75,29 @@ div {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
-    width: 1300px;
-    height: 95px;
+    width: auto;
+    height: auto;
 }
+
 .divcalculate {
   background: rgb(152, 62, 92);
   position: relative;
+  float: bottom;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 730px;
-  width: 340px;
-  height: 95px;
+  margin-top: 930px;
+  width: 330px;
+  height: 90px;
+}
+.divoverall {
+  background: rgb(152, 62, 92);
+  position: relative;
+  float: bottom;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  width: 330px;
+  height: 90px;
 }
 .divstartbar {
   background: rgb(152, 62, 92);
@@ -85,8 +106,8 @@ div {
   margin-right: auto;
   margin-bottom: 30px;
   margin-top: 40px;
-  width: 340px;
-  height: 95px;
+  width: 20%;
+  height: 2%;
 }
 .divright {
     background: rgb(152, 62, 92);
@@ -115,19 +136,24 @@ div {
 
 .divrighthalf {
   background: rgb(152, 62, 92);
+  margin-top:10px;
+  height:270px;
   float: right;
   margin-right: 40px;
   text-align: left;
-  width: 40%;
-  height: auto;
+  width: 270px;
+  height: 270px;
 }
 .divlefthalf {
   background: rgb(152, 62, 92);
+  margin-top:10px;
+  height:270px;
   float: left;
   margin-left: 40px;
+  margin-bottom: 10px;
   text-align: left;
-  width: 40%;
-  height: auto;
+  width: 270px;
+  height: 270px;
 }
 .divcenterresult {
   background: rgb(152, 62, 92);
@@ -149,20 +175,19 @@ div {
   opacity: 1;
 }
 
-
 .button {
     border-radius: 10px;
     border: none;
     color: #FFFFFF;
     background-color: rgb(196, 80, 98);
     text-align: center;
-    font-size: 18px;
+    font-size: 16px;
     font-family:'Open Sans';
     padding: 20px;
-    width: 190px;
+    width: 210px;
     transition: all 0.5s;
     cursor: pointer;
-    margin-bottom: 25px;
+    margin-bottom: 4px;
   }
   
   .button span {
@@ -319,3 +344,151 @@ div {
     padding: 20px;
     display: none;
   }
+
+  @media (max-width: 600px) { 
+  h1 {
+    font-size:60px;
+    color:white;
+  }
+  h2 {
+    font-size:25px
+  }
+
+  .divleft {
+    background: rgb(152, 62, 92);
+    margin-top:10px;
+    height:auto;
+    width:96%;
+    color:white;
+    margin-left: 10px;
+    margin-right: auto;
+    text-align: left;
+  }
+  .divcenter {
+    background: rgb(152, 62, 92);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 580px;
+    width: 96%;
+    height: auto;
+    color: white;
+  }
+  .divright {
+    background: rgb(152, 62, 92);
+    margin-top:20px;
+    height:auto;
+    width:96%;
+    display: block;
+    margin-left: auto;
+    margin-right: 10px;
+    text-align: left;
+  }
+
+  .button {
+    border-radius: 10px;
+    border: none;
+    color: #FFFFFF;
+    background-color: rgb(196, 80, 98);
+    text-align: center;
+    font-size: 12px;
+    font-family:'Open Sans';
+    padding: 10px;
+    width: 160px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+
+  .divcenterbar {
+    background: rgb(152, 62, 92);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    width: auto;
+    height: auto;
+}
+
+  .divrighthalfinput {
+    background: rgb(152, 62, 92);
+    margin-top:10px;
+    height:auto;
+    width:45%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+  }
+  .divlefthalfinput {
+    background: rgb(152, 62, 92);
+    margin-top:10px;
+    height:auto;
+    width:45%;
+    color:white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  .divcalculate {
+    background: rgb(152, 62, 92);
+    position: relative;
+    float: bottom;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1070px;
+    width: 330px;
+    height: auto;
+  }
+
+  .divrighthalf {
+    background: rgb(152, 62, 92);
+    margin-top:10px;
+    height:290px;
+    width:45%;
+    display: block;
+    margin-left: auto;
+    margin-right: 10px;
+    text-align: left;
+  }
+  .divlefthalf {
+    background: rgb(152, 62, 92);
+    margin-top:10px;
+    height:290px;
+    width:45%;
+    color:white;
+    margin-left: 10px;
+    margin-right: auto;
+    text-align: left;
+  }
+  .divcenterresult {
+    background: rgb(152, 62, 92);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 340px;
+    width: 95%;
+    height: auto;
+    color: white;
+  }
+  .divbanner {
+    background: rgb(152, 62, 92);
+    display: block;
+    margin-top: 0%;
+    width: 100%;
+    height: auto;
+    border-radius: 0%;
+    opacity: 1;
+  }
+  .divstartbar {
+    background: rgb(152, 62, 92);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    margin-top: 40px;
+    width: 40%;
+    height: 2%;
+  }
+}
