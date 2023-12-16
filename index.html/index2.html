@@ -8,76 +8,80 @@
   <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script>
-    $(document).ready(function(){
-      $("#flip").click(function(){
-        $("#panel").slideToggle("slow");
-      });
-    });
-    
-    $(document).ready(function(){
-      $("#flip2").click(function(){
-        $("#panel2").slideToggle("slow");
-      });
-    });
-    
-    $(document).ready(function(){
-      $("#flip3").click(function(){
-        $("#panel3").slideToggle("slow");
-      });
-    });
-    
-    $(document).ready(function(){
-      $("#flip4").click(function(){
-        $("#panel4").slideToggle("slow");
-      });
+  $(document).ready(function() {
+    function togglePanel(panelId) {
+      $(panelId).slideToggle("slow");
+    }
+
+    function rotateArrow(arrowId) {
+      $(arrowId).toggleClass('clicked');
+    }
+
+    $("#flip").click(function() {
+      togglePanel("#panel");
+      rotateArrow("#down1");
     });
 
-    $(document).ready(function(){
-      $("#flip5").click(function(){
-        $("#panel5").slideToggle("slow");
-      });
+    $("#flip2").click(function() {
+      togglePanel("#panel2");
+      rotateArrow("#down2");
     });
 
-    $(document).ready(function(){
-      $("#flip6").click(function(){
-        $("#panel6").slideToggle("slow");
-      });
+    $("#flip3").click(function() {
+      togglePanel("#panel3");
+      rotateArrow("#down3");
     });
 
-    $(document).ready(function(){
-      $("#flip7").click(function(){
-        $("#panel7").slideToggle("slow");
-      });
+    $("#flip4").click(function() {
+      togglePanel("#panel4");
+      rotateArrow("#down4");
     });
 
-    $(document).ready(function(){
-      $("#flip8").click(function(){
-        $("#panel8").slideToggle("slow");
-      });
+    $("#flip5").click(function() {
+      togglePanel("#panel5");
+      rotateArrow("#down5");
     });
 
-    $(document).ready(function(){
-      $("#flip9").click(function(){
-        $("#panel9").slideToggle("slow");
-      });
+    $("#flip6").click(function() {
+      togglePanel("#panel6");
+      rotateArrow("#down6");
     });
 
-    $(document).ready(function(){
-      $("#flip10").click(function(){
-        $("#panel10").slideToggle("slow");
-      });
+    $("#flip7").click(function() {
+      togglePanel("#panel7");
+      rotateArrow("#down7");
     });
-  </script>
+
+    $("#flip8").click(function() {
+      togglePanel("#panel8");
+      rotateArrow("#down8");
+    });
+
+    $("#flip9").click(function() {
+      togglePanel("#panel9");
+      rotateArrow("#down9");
+    });
+
+    $("#flip10").click(function() {
+      togglePanel("#panel10");
+      rotateArrow("#down10");
+    });
+  });
+</script>
+
 <title>Input Page</title>
 </head>
 
 <body>
 <div class="divcenterbar">
   <a href="index.html">
-  <button class="button bg-primary"><span>Main Menu </span></button>
+  <button class="button bg-primary" id="mainmenu"><span>Main Menu </span></button>
   </a>
+  
+  <span style="margin-right: 10px;"></span>
+
   <a href="index2.html">
-  <button class="button bg-primary" style="background-color:rgb(101, 41, 61);"><span>Input Page </span></button>
+  <button class="button bg-primary" style="background-color:rgb(143, 42, 72);" id="inputpage"><span>Input Page </span></button>
   </a>
 </div>
 
@@ -85,13 +89,21 @@
 <div class="divlefthalfinput">
   <h2 class="text-left text-info" style="color:white;">Your information</h2><br>
     
-  <div id="flip" style="background-color:rgb(196, 80, 98);">Birthday</div>
+  <div id="flip" style="background-color:rgb(196, 80, 98);">Birthday
+    <span class="icon">
+      <img src="down-arrow.png" class="down" id="down1" style="width: 2rem; filter: invert(1);">
+    </span>
+  </div>
   <div id="panel" style="background-color:rgb(196, 80, 98);">
     <label for="BirthdayLeftInput">Enter Text:</label><br>
     <input type="date" id="BirthdayLeftInput" name="BirthdayLeftInput" style="color:black;">
   </div>
 
-  <div id="flip2" style="background-color:rgb(196, 80, 98);">Ethnicity, Religion</div>
+  <div id="flip2" style="background-color:rgb(196, 80, 98);">Ethnicity, Religion
+    <span class="icon">
+      <img src="down-arrow.png" class="down" id="down2" style="width: 2rem; filter: invert(1);">
+    </span>
+  </div>
   <div id="panel2" style="background-color:rgb(196, 80, 98);">
     <label for="EthnicityLeftInput">Ethnicity:</label><br>
     <input id="EthnicityLeftInput" list="ethnicity1" name="EthnicityLeftInput" style="color:black;">
@@ -113,7 +125,11 @@
     </datalist>
   </div>
 
-  <div id="flip3" style="background-color:rgb(196, 80, 98);">Work & Financial Status</div>
+  <div id="flip3" style="background-color:rgb(196, 80, 98);">Work & Financial Status
+    <span class="icon">
+      <img src="down-arrow.png" class="down" id="down3" style="width: 2rem; filter: invert(1);">
+    </span>
+  </div>
   <div id="panel3" style="background-color:rgb(196, 80, 98);">
     <label for="WorkLeftInput">Work:</label><br>
     <input id="WorkLeftInput" list="work1" name="WorkLeftInput" style="color:black;">
@@ -135,7 +151,11 @@
     </datalist>
   </div>
 
-  <div id="flip4" style="background-color:rgb(196, 80, 98);">Hobbies & Goals</div>
+  <div id="flip4" style="background-color:rgb(196, 80, 98);">Hobbies & Goals
+    <span class="icon">
+      <img src="down-arrow.png" class="down" id="down4" style="width: 2rem; filter: invert(1);">
+    </span>
+  </div>
   <div id="panel4" style="background-color:rgb(196, 80, 98);">
     <label for="HobbiesLeftInput">Hobbies:</label><br>
     <input id="HobbiesLeftInput" list="hobbies1" name="HobbiesLeftInput" style="color:black;">
@@ -158,7 +178,11 @@
     </datalist>
   </div>
 
-  <div id="flip5" style="background-color:rgb(196, 80, 98);">Personality Type</div>
+  <div id="flip5" style="background-color:rgb(196, 80, 98);">Personality Type
+    <span class="icon">
+      <img src="down-arrow.png" class="down" id="down5" style="width: 2rem; filter: invert(1);">
+    </span>
+  </div>
   <div id="panel5" style="background-color:rgb(196, 80, 98);">
     <label for="PersonalityLeftInput">Enter Text:</label><br>
     <input list="personality1" id="PersonalityLeftInput" name="PersonalityLeftInput" style="color:black;">
@@ -186,13 +210,21 @@
 <div class="divrighthalfinput">
   <h2 class="text-left" style="color:white;">Your partner's information</h2><br>
 
-  <div id="flip6" style="background-color:rgb(196, 80, 98);">Birthday</div>
+  <div id="flip6" style="background-color:rgb(196, 80, 98);">Birthday
+    <span class="icon">
+      <img src="down-arrow.png" class="down" id="down6" style="width: 2rem; filter: invert(1);">
+    </span>
+  </div>
   <div id="panel6" style="background-color:rgb(196, 80, 98);">
     <label for="BirthdayRightInput">Enter Text:</label><br>
     <input type="date" id="BirthdayRightInput" name="BirthdayRightInput" style="color:black;">
   </div>
 
-  <div id="flip7" style="background-color:rgb(196, 80, 98);">Ethnicity, Religion</div>
+  <div id="flip7" style="background-color:rgb(196, 80, 98);">Ethnicity, Religion
+    <span class="icon">
+      <img src="down-arrow.png" class="down" id="down7" style="width: 2rem; filter: invert(1);">
+    </span>
+  </div>
   <div id="panel7" style="background-color:rgb(196, 80, 98);">
     <label for="EthnicityRightInput">Ethnicity:</label><br>
     <input id="EthnicityRightInput" list="ethnicity2" name="EthnicityRightInput" style="color:black;">
@@ -214,7 +246,11 @@
       </datalist>
   </div>
 
-  <div id="flip8" style="background-color:rgb(196, 80, 98);">Work & Financial Status</div>
+  <div id="flip8" style="background-color:rgb(196, 80, 98);">Work & Financial Status
+    <span class="icon">
+      <img src="down-arrow.png" class="down" id="down8" style="width: 2rem; filter: invert(1);">
+    </span>
+  </div>
   <div id="panel8" style="background-color:rgb(196, 80, 98);">
     <label for="WorkRightInput">Work:</label><br>
     <input id="WorkRightInput" list="work1" name="WorkRightInput" style="color:black;">
@@ -236,7 +272,11 @@
       </datalist>
   </div>
 
-  <div id="flip9" style="background-color:rgb(196, 80, 98);">Hobbies & Goals</div>
+  <div id="flip9" style="background-color:rgb(196, 80, 98);">Hobbies & Goals
+    <span class="icon">
+      <img src="down-arrow.png" class="down" id="down9" style="width: 2rem; filter: invert(1);">
+    </span>
+  </div>
   <div id="panel9" style="background-color:rgb(196, 80, 98);">
     <label for="HobbiesRightInput">Hobbies:</label><br>
     <input id="HobbiesRightInput" list="hobbies1" name="HobbiesRightInput" style="color:black;">
@@ -259,7 +299,11 @@
     </datalist>
   </div>
 
-  <div id="flip10" style="background-color:rgb(196, 80, 98);">Personality Type</div>
+  <div id="flip10" style="background-color:rgb(196, 80, 98);">Personality Type
+    <span class="icon">
+      <img src="down-arrow.png" class="down" id="down10" style="width: 2rem; filter: invert(1);">
+    </span>
+  </div>
   <div id="panel10" style="background-color:rgb(196, 80, 98);">
     <label for="PersonalityRightInput">Enter Text:</label><br>
     <input list="personality1" id="PersonalityRightInput" name="PersonalityRightInput" style="color:black;">
@@ -285,12 +329,11 @@
 </div>
 </form>
 
-<div class="divcalculate">
+<div class="divcalculate" style="margin-bottom: 50px;"">
   <a href="index3.html">
       <button class="button" style="width: 290px;" onclick="SaveInput()"><span>Calculate! </span></button>
   </a>
 </div>
-
 
 <script>
   function SaveInput() {
