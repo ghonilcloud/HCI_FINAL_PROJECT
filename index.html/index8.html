@@ -9,47 +9,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Final Page</title>
     <script>
-    $(document).ready(function(){
-      $("#flip").click(function(){
-        $("#panel").slideToggle("slow");
-      });
-    });
+      $(document).ready(function() {
+        function togglePanel(panelId) {
+          $(panelId).slideToggle("slow");
+        }
     
-    $(document).ready(function(){
-      $("#flip2").click(function(){
-        $("#panel2").slideToggle("slow");
-      });
-    });
+        function rotateArrow(arrowId) {
+          $(arrowId).toggleClass('clicked');
+        }
     
-    $(document).ready(function(){
-      $("#flip3").click(function(){
-        $("#panel3").slideToggle("slow");
-      });
-    });
+        $("#flip").click(function() {
+          togglePanel("#panel");
+          rotateArrow("#down1");
+        });
     
-    $(document).ready(function(){
-      $("#flip4").click(function(){
-        $("#panel4").slideToggle("slow");
+        $("#flip2").click(function() {
+          togglePanel("#panel2");
+          rotateArrow("#down2");
+        });
+    
+        $("#flip3").click(function() {
+          togglePanel("#panel3");
+          rotateArrow("#down3");
+        });
+    
+        $("#flip4").click(function() {
+          togglePanel("#panel4");
+          rotateArrow("#down4");
+        });
+    
+        $("#flip5").click(function() {
+          togglePanel("#panel5");
+          rotateArrow("#down5");
+        });
+    
+        $("#flip6").click(function() {
+          togglePanel("#panel6");
+          rotateArrow("#down6");
+        });
+    
+        $("#flip7").click(function() {
+          togglePanel("#panel7");
+          rotateArrow("#down7");
+        });
+    
+        $("#flip8").click(function() {
+          togglePanel("#panel8");
+          rotateArrow("#down8");
+        });
+    
+        $("#flip9").click(function() {
+          togglePanel("#panel9");
+          rotateArrow("#down9");
+        });
+    
+        $("#flip10").click(function() {
+          togglePanel("#panel10");
+          rotateArrow("#down10");
+        });
       });
-    });
-
-    $(document).ready(function(){
-      $("#flip5").click(function(){
-        $("#panel5").slideToggle("slow");
-      });
-    });
-
-    $(document).ready(function(){
-      $("#flip6").click(function(){
-        $("#panel6").slideToggle("slow");
-      });
-    });
-
-    $(document).ready(function(){
-      $("#flip7").click(function(){
-        $("#panel7").slideToggle("slow");
-      });
-    });
     </script>
 </head>
 <body>  
@@ -60,42 +78,70 @@
 </div>
     
 <h1 class="text-danger text-center">YOUR FINAL RESULTS</h1>
-<h2 class="text-danger text-center">All percentages compiled, and your the final summary of your relationship.</h2><br><br>
+<h2 class="text-danger text-center">All percentages compiled, and your final summary of your relationship.</h2><br><br>
 
 <div class="divlefthalfoutput">
-    <div id="flip" style="background-color:rgb(196, 80, 98);">Birthday Results</div>
+    <div id="flip" style="background-color:rgb(196, 80, 98);">Birthday Results
+      <span class="icon">
+        <img src="down-arrow.png" class="down" id="down1" style="width: 2rem; filter: invert(1);">
+      </span>
+    </div>
     <div id="panel" style="background-color:rgb(196, 80, 98);">
         <p class="text-left text-info" style="color:white;margin-bottom:0px;" id="BirthdayContent">
     </div>
 
-    <div id="flip2" style="background-color:rgb(196, 80, 98);">Ethnicity & Religion Results</div>
+    <div id="flip2" style="background-color:rgb(196, 80, 98);">Ethnicity & Religion Results
+      <span class="icon">
+        <img src="down-arrow.png" class="down" id="down2" style="width: 2rem; filter: invert(1);">
+      </span>
+    </div>
     <div id="panel2" style="background-color:rgb(196, 80, 98);">
         <p class="text-left text-info" style="color:white;margin-bottom:0px;" id="EthnicityContent"></p>
     </div>
 
-    <div id="flip3" style="background-color:rgb(196, 80, 98);">Work & Financial Results</div>
+    <div id="flip3" style="background-color:rgb(196, 80, 98);">Work & Financial Results
+      <span class="icon">
+        <img src="down-arrow.png" class="down" id="down3" style="width: 2rem; filter: invert(1);">
+      </span>
+    </div>
     <div id="panel3" style="background-color:rgb(196, 80, 98);">
         <p class="text-left text-info" style="color:white;margin-bottom:0px;" id="FinancialContent"></p>
     </div>
 
-    <div id="flip4" style="background-color:rgb(196, 80, 98);">Hobbies & Goals Results</div>
+    <div id="flip4" style="background-color:rgb(196, 80, 98);">Hobbies & Goals Results
+      <span class="icon">
+        <img src="down-arrow.png" class="down" id="down4" style="width: 2rem; filter: invert(1);">
+      </span>
+    </div>
     <div id="panel4" style="background-color:rgb(196, 80, 98);">
         <p class="text-left text-info" style="color:white;margin-bottom:0px;" id="HobbiesContent"></p>
     </div>
 
-    <div id="flip5" style="background-color:rgb(196, 80, 98);">Personality Type Results</div>
+    <div id="flip5" style="background-color:rgb(196, 80, 98);">Personality Type Results
+      <span class="icon">
+        <img src="down-arrow.png" class="down" id="down5" style="width: 2rem; filter: invert(1);">
+      </span>
+    </div>
     <div id="panel5" style="background-color:rgb(196, 80, 98);">
         <p class="text-left text-info" style="color:white;margin-bottom:0px;" id="PersonalityContent"></p>
     </div>
 </div>
 
 <div class="divrighthalfoutput">
-    <div id="flip6" style="background-color:rgb(196, 80, 98);">Total Average</div>
+    <div id="flip6" style="background-color:rgb(196, 80, 98);">Total Average
+      <span class="icon">
+        <img src="down-arrow.png" class="down" id="down6" style="width: 2rem; filter: invert(1);">
+      </span>
+    </div>
     <div id="panel6" style="background-color:rgb(196, 80, 98);">
         <p class="text-left text-info" style="color:white;margin-bottom:0px;" id="AverageContent"></p>
     </div>
 
-    <div id="flip7" style="background-color:rgb(196, 80, 98);">Relationship Summary</div>
+    <div id="flip7" style="background-color:rgb(196, 80, 98);">Relationship Summary
+      <span class="icon">
+        <img src="down-arrow.png" class="down" id="down7" style="width: 2rem; filter: invert(1);">
+      </span>
+    </div>
     <div id="panel7" style="background-color:rgb(196, 80, 98);">
         <p class="text-left text-info" style="color:white;margin-bottom:0px;" id="SummaryContent"></p>
     </div>
