@@ -42,76 +42,23 @@
     <div class="divcenterresult" id="BirthdayResult"></div>
 
     <script>
-        function randomInt(min, max) { 
-        return Math.floor(Math.random() * (max - min + 1) + min)
-        }
-
-        // Display user input on page load
         var BirthdayRightData = localStorage.getItem('BirthdayRightData');
         if (BirthdayRightData) {
             var BirthdayAreaRight = document.getElementById('BirthdayAreaRight');
             BirthdayAreaRight.innerHTML = '<h2 class="text-left text-info" style="color:white;">Your partners information:</h2><br>' + '<h3 style="color:white;">' + BirthdayRightData + '</h3>';
         }
 
-        // Display user input on page load
         var BirthdayLeftData = localStorage.getItem('BirthdayLeftData');
         if (BirthdayLeftData) {
             var BirthdayAreaLeft = document.getElementById('BirthdayAreaLeft');
             BirthdayAreaLeft.innerHTML = '<h2 class="text-left text-info" style="color:white;">Your information:</h2><br>' + '<h3 style="color:white;">' + BirthdayLeftData + '</h3>';
         }
 
-        var date1 = new Date(BirthdayLeftData);
-        var date2 = new Date(BirthdayRightData);
-        
-        // To calculate the time difference of two dates
-        var Difference_In_Time = date2.getTime() - date1.getTime();
-        
-        // To calculate the no. of days between two dates
-        var Difference_In_Days = Math.round(Difference_In_Time / (1000 * 3600 * 24));
-        var Difference_In_Days = Math.abs(Difference_In_Days)
-        
-        // Check if age is under 18
-        // var currentDate = new Date();
-        // var eighteenYearsAgo = new Date(currentDate);
-        // eighteenYearsAgo.setFullYear(currentDate.getFullYear() - 18);
-
-        // if (date1 > eighteenYearsAgo || date2 > eighteenYearsAgo) {
-        //     // Display additional content for age under 18
-        //     var YungContent = "You are under 18 years old. Additional content for minors.";
-        //     // Append this content to BdayContent or display it separately as needed.
-        //     BdayContent += "<br>" + YungContent;
-        // }
-
-        if (Difference_In_Days <= 365){ // Less than 1 year
-            BirthdayChance = randomInt(80, 100)
-            BdayContent = "For couples with a 100% chance, which is a less than 1 year age difference, the shared context of similar ages can lead to a deeper understanding of each other's perspectives. Embracing this alignment can enhance the relationship by providing a common ground for shared experiences and cultural references."
-        }        
-        else if (Difference_In_Days >= 7300){ // 20 years
-            BirthdayChance = randomInt(0, 20)
-            BdayContent = "For couples with a 0%, a 20 year or more age difference, while love knows no age, a substantial age gap may bring distinct challenges. Open communication, mutual respect, and early discussions about expectations, concerns, and long-term goals are vital for a harmonious relationship. It's important to be aware of potential generational differences and work together to bridge them."
-        }        
-        else if (Difference_In_Days >= 3652){ // 10 years
-            BirthdayChance = randomInt(30, 50)
-            BdayContent = "A 40% chance, a 10 year age difference, the significant gap may present unique opportunities for learning and growth. Navigating challenges with understanding, patience, and open communication is crucial, as different life stages may lead to varying priorities. "
-        }        
-        else if (Difference_In_Days >= 1825){ // 5 years
-            BirthdayChance = randomInt(60, 80)
-            BdayContent = "A 70% chance, a 5 year age gap can bring a balance of wisdom and youthful energy, offering a richness of experiences while navigating challenges together. Open communication about goals and timelines is essential to ensure alignment in major life decisions."
-        }        
-        else if (Difference_In_Days > 365){ // More than 1 year
-            BirthdayChance = randomInt(70, 90)
-            BdayContent = "For couples with an 80% (more than 1 year) age difference, the noticeable but reasonable gap can be an opportunity to appreciate the blend of youthful energy and accumulated wisdom each partner brings. Celebrating these differences and learning from each other can enrich the relationship."
-        }        
-        else {
-            BirthdayChance = randomInt(0, 20)
-            BdayContent = "For couples with a 0%, which is a 20 year or more age difference, while love knows no age, a substantial age gap may bring distinct challenges. Open communication, mutual respect, and early discussions about expectations, concerns, and long-term goals are vital for a harmonious relationship. It's important to be aware of potential generational differences and work together to bridge them."
-        }        
-        // To display the final no. of days (result)
-        if (Difference_In_Time) {
+        var BirthdayChance = localStorage.getItem('BirthdayChance');
+        var BirthdayContent = localStorage.getItem('BirthdayContent');
+        if (BirthdayChance) {
             var BirthdayResult = document.getElementById('BirthdayResult');
-            BirthdayResult.innerHTML = '<h2 class="text-center text-info" style="color:white;margin-bottom:0px;">Your Chances:</h2><br>' + '<h2 style="color:white;">' + BirthdayChance + "%" +'</h2>' + '<hr>' + '<h3 class="text-center text-info" style="color:white;margin-bottom:0px;">' + BdayContent + '</h3>';
+            BirthdayResult.innerHTML = '<h2 class="text-center text-info" style="color:white;margin-bottom:0px;">Your Chances:</h2><br>' + '<h2 style="color:white;">' + BirthdayChance + "%" +'</h2>' + '<hr>' + '<h3 class="text-center text-info" style="color:white;margin-bottom:0px;">' + BirthdayContent + '</h3>';
         }
-        
-        localStorage.setItem('BirthdayResult', BirthdayChance);
     </script>
 </body>
