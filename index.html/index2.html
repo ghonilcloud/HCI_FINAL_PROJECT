@@ -336,54 +336,207 @@
 </div>
 
 <script>
-  function SaveInput() {
-    var BirthdayLeftData = document.getElementById('BirthdayLeftInput').value;
-      localStorage.setItem('BirthdayLeftData', BirthdayLeftData);
+function SaveInput() {
+  var BirthdayLeftData = document.getElementById('BirthdayLeftInput').value;
+    localStorage.setItem('BirthdayLeftData', BirthdayLeftData);
 
-    var EthnicityLeftData = document.getElementById('EthnicityLeftInput').value;
-      localStorage.setItem('EthnicityLeftData', EthnicityLeftData);
+  var EthnicityLeftData = document.getElementById('EthnicityLeftInput').value;
+    localStorage.setItem('EthnicityLeftData', EthnicityLeftData);
 
-    var ReligionLeftData = document.getElementById('ReligionLeftInput').value;
-      localStorage.setItem('ReligionLeftData', ReligionLeftData);
+  var ReligionLeftData = document.getElementById('ReligionLeftInput').value;
+    localStorage.setItem('ReligionLeftData', ReligionLeftData);
 
-    var WorkLeftData = document.getElementById('WorkLeftInput').value;
-      localStorage.setItem('WorkLeftData', WorkLeftData);
+  var WorkLeftData = document.getElementById('WorkLeftInput').value;
+    localStorage.setItem('WorkLeftData', WorkLeftData);
 
-    var FinancialLeftData = document.getElementById('FinancialLeftInput').value;
-      localStorage.setItem('FinancialLeftData', FinancialLeftData);
+  var FinancialLeftData = document.getElementById('FinancialLeftInput').value;
+    localStorage.setItem('FinancialLeftData', FinancialLeftData);
 
-    var HobbiesLeftData = document.getElementById('HobbiesLeftInput').value;
-      localStorage.setItem('HobbiesLeftData', HobbiesLeftData);
+  var HobbiesLeftData = document.getElementById('HobbiesLeftInput').value;
+    localStorage.setItem('HobbiesLeftData', HobbiesLeftData);
 
-    var GoalsLeftData = document.getElementById('GoalsLeftInput').value;
-      localStorage.setItem('GoalsLeftData', GoalsLeftData);
+  var GoalsLeftData = document.getElementById('GoalsLeftInput').value;
+    localStorage.setItem('GoalsLeftData', GoalsLeftData);
 
-    var PersonalityLeftData = document.getElementById('PersonalityLeftInput').value;
-      localStorage.setItem('PersonalityLeftData', PersonalityLeftData);
+  var PersonalityLeftData = document.getElementById('PersonalityLeftInput').value;
+    localStorage.setItem('PersonalityLeftData', PersonalityLeftData);
 
-    var BirthdayRightData = document.getElementById('BirthdayRightInput').value;
-      localStorage.setItem('BirthdayRightData', BirthdayRightData);
+  var BirthdayRightData = document.getElementById('BirthdayRightInput').value;
+    localStorage.setItem('BirthdayRightData', BirthdayRightData);
 
-    var EthnicityRightData = document.getElementById('EthnicityRightInput').value;
-      localStorage.setItem('EthnicityRightData', EthnicityRightData);
+  var EthnicityRightData = document.getElementById('EthnicityRightInput').value;
+    localStorage.setItem('EthnicityRightData', EthnicityRightData);
+
+  var ReligionRightData = document.getElementById('ReligionRightInput').value;
+    localStorage.setItem('ReligionRightData', ReligionRightData);
+
+  var WorkRightData = document.getElementById('WorkRightInput').value;
+    localStorage.setItem('WorkRightData', WorkRightData);
+
+  var FinancialRightData = document.getElementById('FinancialRightInput').value;
+    localStorage.setItem('FinancialRightData', FinancialRightData);
   
-    var ReligionRightData = document.getElementById('ReligionRightInput').value;
-      localStorage.setItem('ReligionRightData', ReligionRightData);
+  var HobbiesRightData = document.getElementById('HobbiesRightInput').value;
+    localStorage.setItem('HobbiesRightData', HobbiesRightData);
 
-    var WorkRightData = document.getElementById('WorkRightInput').value;
-      localStorage.setItem('WorkRightData', WorkRightData);
+  var GoalsRightData = document.getElementById('GoalsRightInput').value;
+    localStorage.setItem('GoalsRightData', GoalsRightData);
 
-    var FinancialRightData = document.getElementById('FinancialRightInput').value;
-      localStorage.setItem('FinancialRightData', FinancialRightData);
-    
-    var HobbiesRightData = document.getElementById('HobbiesRightInput').value;
-      localStorage.setItem('HobbiesRightData', HobbiesRightData);
+  var PersonalityRightData = document.getElementById('PersonalityRightInput').value;
+    localStorage.setItem('PersonalityRightData', PersonalityRightData);
 
-    var GoalsRightData = document.getElementById('GoalsRightInput').value;
-      localStorage.setItem('GoalsRightData', GoalsRightData);
+function randomInt(min, max) { 
+  return Math.floor(Math.random() * (max - min + 1) + min)
+}
 
-    var PersonalityRightData = document.getElementById('PersonalityRightInput').value;
-      localStorage.setItem('PersonalityRightData', PersonalityRightData);
-  }
+// Calculating for Index3
+var BirthdayLeftData = localStorage.getItem('BirthdayLeftData');
+var BirthdayRightData = localStorage.getItem('BirthdayRightData');
+
+var date1 = new Date(BirthdayLeftData);
+var date2 = new Date(BirthdayRightData);
+
+var Difference_In_Time = date2.getTime() - date1.getTime();
+
+var Difference_In_Days = Math.round(Difference_In_Time / (1000 * 3600 * 24));
+var Difference_In_Days = Math.abs(Difference_In_Days)
+
+if (Difference_In_Days <= 365){ // Less than 1 year
+  BirthdayChance = randomInt(80, 100)
+  BirthdayContent = "For couples with a 100% chance, which is a less than 1 year age difference, the shared context of similar ages can lead to a deeper understanding of each other's perspectives. Embracing this alignment can enhance the relationship by providing a common ground for shared experiences and cultural references."
+}        
+else if (Difference_In_Days >= 7300){ // 20 years
+  BirthdayChance = randomInt(0, 20)
+  BirthdayContent = "For couples with a 0%, a 20 year or more age difference, while love knows no age, a substantial age gap may bring distinct challenges. Open communication, mutual respect, and early discussions about expectations, concerns, and long-term goals are vital for a harmonious relationship. It's important to be aware of potential generational differences and work together to bridge them."
+}        
+else if (Difference_In_Days >= 3652){ // 10 years
+  BirthdayChance = randomInt(30, 50)
+  BirthdayContent = "A 40% chance, a 10 year age difference, the significant gap may present unique opportunities for learning and growth. Navigating challenges with understanding, patience, and open communication is crucial, as different life stages may lead to varying priorities. "
+}        
+else if (Difference_In_Days >= 1825){ // 5 years
+  BirthdayChance = randomInt(60, 80)
+  BirthdayContent = "A 70% chance, a 5 year age gap can bring a balance of wisdom and youthful energy, offering a richness of experiences while navigating challenges together. Open communication about goals and timelines is essential to ensure alignment in major life decisions."
+}        
+else if (Difference_In_Days > 365){ // More than 1 year
+  BirthdayChance = randomInt(70, 90)
+  BirthdayContent = "For couples with an 80% (more than 1 year) age difference, the noticeable but reasonable gap can be an opportunity to appreciate the blend of youthful energy and accumulated wisdom each partner brings. Celebrating these differences and learning from each other can enrich the relationship."
+}        
+else {
+  BirthdayChance = randomInt(0, 20)
+  BirthdayContent = "For couples with a 0%, which is a 20 year or more age difference, while love knows no age, a substantial age gap may bring distinct challenges. Open communication, mutual respect, and early discussions about expectations, concerns, and long-term goals are vital for a harmonious relationship. It's important to be aware of potential generational differences and work together to bridge them."
+}        
+
+localStorage.setItem('BirthdayChance', BirthdayChance);
+localStorage.setItem('BirthdayContent', BirthdayContent);
+
+//Calculating for Index4
+var EthnicityLeftData = localStorage.getItem('EthnicityLeftData');
+var EthnicityRightData = localStorage.getItem('EthnicityRightData');
+
+if (EthnicityLeftData == EthnicityRightData && ReligionLeftData == ReligionRightData){
+  EthnicityChance = randomInt(70, 100)
+  EthnicityContent = "Having a romantic partner of the same ethnicity and religion can bring about several benefits. Shared ethnicity often means common cultural backgrounds, traditions, and languages, fostering a deep understanding and connection. This can contribute to a sense of belonging and shared identity, making it easier to navigate societal expectations and family dynamics. Similarly, having the same religion can provide a strong foundation for shared values, moral principles, and a mutual spiritual connection. Couples who share the same faith often find comfort and support in practicing their beliefs together, contributing to a sense of unity and purpose in the relationship. <br><br> However, there are potential downsides as well. Overemphasis on shared ethnicity and religion might lead to assumptions about compatibility, overlooking individual differences in personalities, interests, and aspirations. Moreover, external pressures from families or communities may arise, adding stress to the relationship. Striking a balance between shared cultural and religious values and respecting individual identities is crucial to maintaining a healthy and harmonious relationship. <br><br> It's essential to ensure that the relationship thrives on genuine compatibility, communication, and mutual respect rather than solely relying on shared ethnicity and religion."
+}
+else if (EthnicityLeftData == EthnicityRightData){
+  EthnicityChance = randomInt(20, 60)
+  EthnicityContent = "Being of the same ethnicity as your romantic partner can bring about various upsides and downsides. On the positive side, shared cultural backgrounds often foster a sense of understanding and familiarity, creating a strong foundation for communication and connection. Common traditions, values, and language can enhance the feeling of belonging and make it easier to navigate societal expectations. Additionally, there may be fewer challenges related to cultural differences, reducing the likelihood of misunderstandings or clashes in certain aspects of life. <br><br> However, on the downside, being of the same ethnicity doesn't guarantee compatibility in other aspects of a relationship, such as personalities, interests, or life goals. Moreover, there is the risk of stereotyping or making assumptions based on shared ethnicity, potentially overlooking individual differences. Additionally, external pressures from family or societal expectations may arise, placing undue stress on the couple. Ultimately, the impact of sharing the same ethnicity with a romantic partner varies based on the individuals involved and the dynamics of their relationship."
+}
+else if (ReligionLeftData == ReligionRightData){
+  EthnicityChance = randomInt(20, 60)
+  EthnicityContent = "Being of the same religion as your romantic partner comes with both positive and negative aspects. On the positive side, shared religious beliefs can provide a strong foundation for common values, moral principles, and a shared worldview. This shared spiritual connection can deepen the emotional and intellectual bond between partners, fostering a sense of unity and purpose in the relationship. Couples who share the same faith often find comfort and support in practicing their beliefs together, whether through shared rituals, ceremonies, or community engagement. <br><br> However, on the downside, religious differences within a relationship can potentially lead to conflicts, particularly if the partners have differing interpretations or levels of commitment to their faith. Additionally, there may be challenges if families or communities have specific expectations or if there is pressure to conform to traditional religious norms. Striking a balance between individual beliefs and shared practices is crucial for a harmonious relationship when partners are of the same religion."
+}
+else {
+  EthnicityChance = randomInt(0, 20)
+  EthnicityContent = "Having a romantic partner from a different religion and ethnicity can offer both benefits and challenges. One of the main benefits is the potential for cultural and religious exchange, providing an enriching and diverse experience for both individuals. Exposure to different traditions, customs, and perspectives can broaden one's understanding of the world and foster personal growth. <br><br> Additionally, it may lead to a more open-minded and tolerant approach to differences. However, there are downsides to navigating such differences. Communication challenges may arise due to varying cultural expectations or religious practices, potentially leading to misunderstandings. Family and societal pressures may also present difficulties, as some communities may have specific expectations regarding the ethnicity and religion of a partner. <br><br> It's crucial for both individuals to approach these differences with respect, understanding, and open communication. Ultimately, the success of a relationship between individuals of different religions and ethnicities depends on their ability to navigate and appreciate these diversities, finding common ground while respecting each other's unique backgrounds. Open communication, mutual respect, and a willingness to learn from one another can turn potential challenges into opportunities for growth and connection."  
+}
+
+localStorage.setItem('EthnicityChance', EthnicityChance);
+localStorage.setItem('EthnicityContent', EthnicityContent);
+
+//Calculating for Index5
+if (FinancialLeftData == "In-debt"){
+    FinancialChance = randomInt(0, 20)
+    FinancialContent = "Being in debt while in a romantic relationship can introduce various challenges and downsides. Financial stress is a significant source of strain on relationships, and indebtedness can exacerbate these issues. One downside is the strain on communication. Differences in spending habits, financial priorities, or approaches to managing debt can cause conflicts. Open and honest communication is crucial in addressing these issues, but the emotional weight of debt may make these conversations difficult. <br><br> Another challenge is the limited financial freedom experienced by both individuals in the relationship. Debt can impact the ability to save, invest, or pursue shared goals, such as buying a home or going on vacations. The burden of debt payments can restrict the choices and lifestyle options available to the couple. <br><br> Indebtedness can also have an impact on credit scores, which can affect the couple's ability to make significant financial decisions together. Lower credit scores may result in higher interest rates when applying for loans or impact eligibility for certain financial opportunities. Moreover, debt can contribute to stress and anxiety, affecting the mental and emotional well-being of both partners. The pressure of managing debt can spill over into other aspects of the relationship, potentially leading to increased tension and disagreements."
+}
+else if (FinancialRightData == "In-debt"){
+  FinancialChance = randomInt(0, 20)
+  FinancialContent = "Being in debt while in a romantic relationship can introduce various challenges and downsides. Financial stress is a significant source of strain on relationships, and indebtedness can exacerbate these issues. One downside is the strain on communication. Differences in spending habits, financial priorities, or approaches to managing debt can cause conflicts. Open and honest communication is crucial in addressing these issues, but the emotional weight of debt may make these conversations difficult. <br><br> Another challenge is the limited financial freedom experienced by both individuals in the relationship. Debt can impact the ability to save, invest, or pursue shared goals, such as buying a home or going on vacations. The burden of debt payments can restrict the choices and lifestyle options available to the couple. <br><br> Indebtedness can also have an impact on credit scores, which can affect the couple's ability to make significant financial decisions together. Lower credit scores may result in higher interest rates when applying for loans or impact eligibility for certain financial opportunities. Moreover, debt can contribute to stress and anxiety, affecting the mental and emotional well-being of both partners. The pressure of managing debt can spill over into other aspects of the relationship, potentially leading to increased tension and disagreements."
+}
+else if (FinancialLeftData == FinancialRightData && WorkLeftData == WorkRightData) {
+  FinancialChance = randomInt(80, 100)
+  FinancialContent = "Having the same work and financial status as your romantic partner can bring about several benefits to the relationship. Firstly, shared work and financial status often lead to a sense of equality and mutual understanding. Both partners can relate to each other's professional challenges, goals, and the daily experiences that come with similar occupations. This shared understanding can contribute to a stronger emotional connection and camaraderie. <br><br> Financial compatibility is another significant benefit. Similar income levels and financial goals can facilitate smoother financial planning and decision-making within the relationship. Couples with comparable financial statuses are often on the same page when it comes to budgeting, saving, and making major financial decisions, reducing potential sources of conflict related to money matters. <br><br> Additionally, having similar work and financial statuses can create a sense of partnership and collaboration. Both individuals may contribute equally to the household and share responsibilities, creating a balanced and cooperative dynamic. This can lead to a more harmonious relationship where both partners feel a sense of teamwork in achieving their shared and individual goals. Overall, aligning in work and financial status can foster a foundation of shared values, understanding, and mutual support in a romantic partnership."
+}
+else if (FinancialLeftData == FinancialRightData) {
+  FinancialChance = randomInt(60, 80)
+  FinancialContent = "Being in the same financial status as your romantic partner offers various benefits and potential downsides. The advantages include enhanced financial compatibility, where aligning on budgeting and long-term goals is often more seamless. This shared stability can reduce financial stress within the relationship, allowing both partners to focus on building a strong connection without the added pressure of disparate financial circumstances. Additionally, equal financial contributions can foster a sense of balance and teamwork in managing shared expenses, contributing to a more harmonious partnership. <br><br> However, there are downsides to consider. Dependency on each other's income may emerge as a challenge, particularly during financial difficulties when both partners feel the impact simultaneously. The similarity in financial status might also limit the range of experiences and opportunities the couple can afford, potentially leading to a more constrained lifestyle. Furthermore, changes in financial status, whether positive or negative, can create potential for resentment or feelings of inadequacy. Navigating these challenges requires open communication, financial planning, and a shared commitment to addressing the evolving dynamics of the relationship and its financial aspects."
+}
+else if (WorkLeftData == WorkRightData) {
+  FinancialChance = randomInt(50, 80)
+  FinancialContent = "Having the same profession or line of work as your partner can offer both advantages and potential drawbacks. One of the key benefits is the shared understanding of the challenges and dynamics of the workplace. Couples with similar professions often find it easier to relate to each other's professional experiences, providing a unique level of empathy and support. Shared work can also facilitate a deeper connection as both individuals can engage in meaningful conversations about their respective fields, fostering intellectual compatibility and a shared sense of purpose. Additionally, having the same work may make it more practical to coordinate schedules, attend industry events together, or collaborate on projects, enhancing the overall quality of their time spent together. <br><br> However, there are potential downsides to consider. Spending extensive time together in a professional and personal capacity may lead to difficulties in setting boundaries between work and personal life. It could also result in the couple facing similar workplace challenges simultaneously, potentially increasing stress levels if both partners encounter professional setbacks or high-pressure situations simultaneously. Additionally, competition or comparison in the workplace may arise, introducing an element of rivalry that could impact the dynamics of the relationship. Striking a balance between professional and personal aspects is crucial to ensure a healthy and sustainable relationship when partners share the same line of work."
+}
+else {
+  FinancialChance = randomInt(0, 20)
+  FinancialContent = "Not having the same financial status and work as your partner can introduce various challenges and downsides to a relationship. One significant downside is the potential for financial disparities to create strain or power imbalances within the partnership. Differences in income levels may lead to disparities in lifestyle choices, spending habits, and the ability to contribute equally to shared expenses. This asymmetry can, over time, contribute to feelings of resentment or inadequacy if not addressed openly and effectively. <br><br> Moreover, divergent work schedules or commitments can create challenges in terms of time management and quality time spent together. Mismatched professional demands may lead to difficulties in coordinating schedules, potentially resulting in limited opportunities for shared activities or quality bonding time. Additionally, if partners have different career aspirations or work-related stressors, it may be challenging to fully understand and empathize with each other's professional experiences, potentially leading to a lack of emotional support or misunderstanding. <br><br> In summary, not sharing the same financial status and work as a partner can lead to issues related to financial disparities, lifestyle incongruities, and challenges in managing time together. Open communication, mutual respect, and a willingness to navigate these differences collaboratively are essential to maintaining a healthy and harmonious relationship despite such variations."
+}
+
+localStorage.setItem('FinancialChance', FinancialChance);
+localStorage.setItem('FinancialContent', FinancialContent);
+
+//Calculating for Index6
+if (HobbiesLeftData == HobbiesRightData && GoalsLeftData == GoalsRightData){
+    HobbiesChance = randomInt(60, 100)
+    HobbiesContent = "Having a romantic partner with similar hobbies and goals can offer several advantages. Shared interests create a strong foundation for bonding and spending quality time together. Pursuing common hobbies provides built-in opportunities for shared experiences, enhancing the overall enjoyment of the relationship. Similar goals can align both partners on a path of mutual growth, providing a sense of direction and purpose. This alignment can contribute to effective collaboration and support, as both individuals work towards shared objectives. Additionally, having common hobbies and goals can facilitate smoother communication, fostering a deeper understanding and connection between partners. <br><br> However, there are potential downsides to consider. Over-reliance on shared hobbies and goals may lead to a lack of diversity in experiences, potentially limiting individual growth. It's crucial to ensure that each partner maintains space for personal interests and aspirations to avoid potential feelings of being too enmeshed. Furthermore, if the relationship faces challenges or if one partner's goals change over time, there may be a need for open communication and adaptability to navigate these shifts successfully. Striking a balance between shared activities and individual pursuits is essential for a healthy and sustainable romantic relationship."
+}
+else if(GoalsLeftData == GoalsRightData){
+  HobbiesChance = randomInt(40, 60)
+  HobbiesContent = "Having a romantic partner with the same goals can be advantageous in various ways. One of the key benefits is the alignment of shared aspirations, which can create a strong sense of purpose and direction in the relationship. Common goals, whether they are related to career, personal development, or lifestyle choices, provide a foundation for mutual support and encouragement. Shared ambitions can also lead to effective collaboration, allowing both partners to work together towards their common objectives. Furthermore, having similar goals may contribute to a more harmonious and fulfilling life together, as both individuals are moving in the same direction. <br><br> However, there are potential downsides to consider. If both partners are intensely focused on their shared goals, there might be a risk of neglecting other aspects of the relationship or individual growth. Additionally, if circumstances change or one person's goals evolve differently from the other's, it could lead to challenges in maintaining alignment. Striking a balance between shared goals and allowing space for individual aspirations is crucial to ensure a healthy and sustainable relationship. <br><br> In summary, while having a romantic partner with the same goals can provide a strong foundation for unity and collaboration, it's essential to navigate the complexities that may arise and maintain a healthy balance between shared objectives and individual growth. Open communication and flexibility are key in addressing challenges and ensuring the long-term success of the relationship."
+}
+else if(HobbiesLeftData == HobbiesRightData){
+  HobbiesChance = randomInt(40, 60)
+  HobbiesContent = "Having a romantic partner with the same hobbies can bring about numerous benefits. Shared interests create a strong foundation for bonding and quality time spent together, fostering a deep connection. Engaging in activities both partners enjoy can enhance the overall enjoyment of the relationship and contribute to a sense of shared purpose. Common hobbies provide natural opportunities for shared experiences, making it easier to plan enjoyable activities and create lasting memories together. Additionally, shared interests can facilitate smoother communication, as both individuals have a common language around their chosen activities, promoting a sense of understanding and connection. <br><br> However, there are potential downsides to consider. If the relationship becomes solely focused on shared hobbies, there's a risk of limited diversity in experiences and interactions. It's important for each partner to maintain individual interests to ensure a well-rounded and dynamic relationship. Additionally, overly relying on shared hobbies may create challenges if one person's interests evolve or change over time, requiring open communication and flexibility to adapt to shifting preferences. Striking a balance between shared activities and individual pursuits is crucial for a healthy and sustainable romantic relationship."
+}
+else {
+  HobbiesChance = randomInt(0, 20)
+  HobbiesContent = "Having a romantic partner with no similar hobbies and goals can present both benefits and challenges. On the positive side, differences in hobbies and goals can bring diversity and novelty to the relationship. Each partner maintains a sense of individuality, pursuing unique interests and personal growth. This diversity can lead to enriching conversations, as each person brings distinct perspectives and experiences to the relationship. Moreover, it allows for mutual support and encouragement in pursuing separate passions, fostering a supportive environment for both partners to thrive as individuals. <br><br> However, there are potential downsides to consider. Without shared hobbies or goals, finding common ground for activities and future plans may require more effort and compromise. Communication might be challenging if there is a lack of understanding or interest in each other's pursuits. Additionally, differing goals may lead to conflicting priorities or aspirations, requiring open and honest communication to navigate potential conflicts and ensure both partners feel fulfilled in the relationship. Striking a balance between individual pursuits and finding ways to connect on shared values or overarching life goals is essential for creating a harmonious and lasting romantic partnership."
+}
+
+localStorage.setItem('HobbiesChance', HobbiesChance);
+localStorage.setItem('HobbiesContent', HobbiesContent);
+
+//Calculating for Index7
+if (PersonalityLeftData && PersonalityRightData) {
+    // Define compatible and incompatible MBTI pairs
+    var compatiblePairs = {
+        'INTJ': ['ENTJ', 'ENTP', 'ENFP', 'ESTP', 'ESFP', 'ISTP', 'INTP'],
+        'INFP': ['ENFJ', 'ENFP', 'INFJ', 'INFP', 'INTJ', 'INTP', 'ISFJ', 'ISFP'],
+        'ENFP': ['ENFJ', 'ENFP', 'INFJ', 'INFP', 'INTJ', 'INTP', 'ISFJ', 'ISFP'],
+        'ENTJ': ['ENTJ', 'ENTP', 'ESTJ', 'ESTP', 'INTJ', 'ISTJ', 'ISTP', 'ISFJ'],
+        'INFJ': ['ENFJ', 'ENFP', 'INFJ', 'INFP', 'INTJ', 'INTP', 'ISFJ', 'ISFP'],
+        'ENFJ': ['ENFJ', 'ENFP', 'INFJ', 'INFP', 'INTJ', 'INTP', 'ISFJ', 'ISFP'],
+        'INTP': ['ENTJ', 'ENTP', 'ENFP', 'ESTP', 'ESFP', 'ISTP', 'INTP'],
+        'ENTP': ['ENTJ', 'ENTP', 'ENFP', 'ESTP', 'ESFP', 'ISTP', 'INTP'],
+        'ISFJ': ['ENFJ', 'ESFJ', 'ISFJ', 'ISFP', 'ISTJ', 'INFJ', 'INFP', 'INTJ'],
+        'ESFJ': ['ENFJ', 'ESFJ', 'ISFJ', 'ISFP', 'ISTJ', 'INFJ', 'INFP', 'INTJ'],
+        'ISTJ': ['ENTJ', 'ESFJ', 'ISTJ', 'ISFJ', 'ISTP', 'INFJ', 'INTJ', 'ISFP'],
+        'ESTJ': ['ENTJ', 'ESFJ', 'ISTJ', 'ISFJ', 'ISTP', 'INFJ', 'INTJ', 'ISFP'],
+        'ISTP': ['ESTP', 'ISTP', 'ESFP', 'ISFP', 'ESTJ', 'ISTJ', 'ENFP', 'INFP', 'ENTP', 'INTP', 'ENTJ', 'INTJ'],
+        'ESTP': ['ESTP', 'ISTP', 'ESFP', 'ISFP', 'ESTJ', 'ISTJ', 'ENFP', 'INFP', 'ENTP', 'INTP', 'ENTJ', 'INTJ'],
+        'ISFP': ['ESTP', 'ISTP', 'ESFP', 'ISFP', 'ESTJ', 'ISTJ', 'ENFP', 'INFP', 'ENTP', 'INTP', 'ENTJ', 'INTJ'],
+        'ESFP': ['ESTP', 'ISTP', 'ESFP', 'ISFP', 'ESTJ', 'ISTJ', 'ENFP', 'INFP', 'ENTP', 'INTP', 'ENTJ', 'INTJ']
+    };
+
+// Check compatibility
+var compatibility = 'Not Compatible';
+PersonalityContent = "Having incompatible MBTI (Myers-Briggs Type Indicator) personalities in relationships or team settings can present various challenges. Firstly, communication breakdowns are common when individuals with disparate personality types interact. Differences in communication styles, decision-making processes, and approaches to problem-solving may lead to misunderstandings, frustration, and difficulty in conveying ideas effectively. These challenges can hinder collaboration and contribute to a less productive and harmonious environment. <br><br> Secondly, in team settings, incompatible MBTI personalities may result in difficulties in achieving consensus and cohesive decision-making. Divergent preferences in Extraversion/Introversion, Sensing/Intuition, Thinking/Feeling, and Judging/Perceiving can lead to conflicting priorities and strategies. This lack of alignment may impede progress, hinder creativity, and create tension within the team. <br><br> Thirdly, in personal relationships, incompatible MBTI personalities may lead to ongoing misunderstandings and conflicts. Differences in values, communication styles, and approaches to handling emotions can strain the relationship. Without a shared understanding of each other's preferences, individuals may find it challenging to meet each other's needs and may struggle to build the necessary empathy and mutual respect that underpin successful relationships. <br><br> It's important to note that while MBTI can provide insights into personality preferences, it has its limitations, and successful relationships often require effective communication, compromise, and an appreciation for each other's unique qualities, regardless of personality type.";
+
+if (compatiblePairs[PersonalityLeftData]?.includes(PersonalityRightData)) {
+    compatibility = 'Compatible';
+    PersonalityContent = "Having compatible MBTI (Myers-Briggs Type Indicator) personalities in interpersonal relationships can yield several significant benefits. Firstly, compatibility in personality types often leads to enhanced communication. Individuals with similar preferences in Extraversion/Introversion, Sensing/Intuition, Thinking/Feeling, and Judging/Perceiving are more likely to understand and appreciate each other's communication styles, reducing misunderstandings and fostering a smoother flow of ideas and information. <br><br> Secondly, compatible MBTI personalities contribute to effective collaboration and teamwork. When team members share similar preferences in how they approach tasks and make decisions, they can align more easily on goals and strategies. This shared understanding helps create a cohesive and efficient working environment, where individuals complement each other's strengths and work together harmoniously toward common objectives. <br><br> Thirdly, compatible MBTI personalities can lead to a more supportive and harmonious social environment. In personal relationships, compatibility in personality types often results in a deeper understanding of each other's needs, values, and motivations. This understanding forms the basis for empathy and mutual respect, creating a positive and supportive atmosphere that fosters personal growth and strengthens the bond between individuals. <br><br> While compatibility in MBTI personalities can contribute positively to relationships and collaboration, it's essential to recognize that successful relationships also involve a degree of flexibility, adaptability, and open communication to navigate differences and challenges that may arise.";
+}
+}
+
+localStorage.setItem('PersonalityChance', compatibility);
+localStorage.setItem('PersonalityContent', PersonalityContent);
+}
 </script>
 </body>
