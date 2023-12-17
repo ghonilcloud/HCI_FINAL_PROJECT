@@ -41,25 +41,25 @@
     <div class="divcenterresult" id="FinancialResult"></div>
 
     <script>
-        var HobbiesRightData = localStorage.getItem('HobbiesRightData');
-        var GoalsRightData = localStorage.getItem('GoalsRightData');
-        if (HobbiesRightData) {
-            var HobbiesAreaRight = document.getElementById('HobbiesAreaRight');
-            HobbiesAreaRight.innerHTML = '<h2 class="text-left text-info" style="color:white;">Your partners information:</h2><br>' + '<h3 style="color:white;">' + HobbiesRightData + '</h3>' + "<br>" +  '<h3 style="color:white;">' + GoalsRightData + '</h3>';
+        var WorkRightData = localStorage.getItem('WorkRightData');
+        var FinancialRightData = localStorage.getItem('FinancialRightData');
+        if (WorkRightData) {
+            var FinancialAreaRight = document.getElementById('FinancialAreaRight');
+            FinancialAreaRight.innerHTML = '<h2 class="text-left text-info" style="color:white;">Your partners information:</h2><br>' + '<h3 style="color:white;">' + WorkRightData + '</h3>' + "<br>" +  '<h3 style="color:white;">' + FinancialRightData + '</h3>';
         }
 
-        var HobbiesLeftData = localStorage.getItem('HobbiesLeftData');
-        var GoalsLeftData = localStorage.getItem('GoalsLeftData');
-        if (HobbiesLeftData) {
-            var HobbiesAreaLeft = document.getElementById('HobbiesAreaLeft')
-            HobbiesAreaLeft.innerHTML = '<h2 class="text-left text-info" style="color:white;">Your information:</h2><br>' + '<h3 style="color:white;">' + HobbiesLeftData + '</h3>' + "<br>" +  '<h3 style="color:white;">' + GoalsLeftData + '</h3>';
+        var WorkLeftData = localStorage.getItem('WorkLeftData');
+        var FinancialLeftData = localStorage.getItem('FinancialLeftData');
+        if (WorkLeftData) {
+            var FinancialAreaLeft = document.getElementById('FinancialAreaLeft')
+            FinancialAreaLeft.innerHTML = '<h2 class="text-left text-info" style="color:white;">Your information:</h2><br>' + '<h3 style="color:white;">' + WorkLeftData + '</h3>' + "<br>" +  '<h3 style="color:white;">' + FinancialLeftData + '</h3>';
         }
 
-        var HobbiesChance = localStorage.getItem('HobbiesChance');
-        var HobbiesContent = localStorage.getItem('HobbiesContent');
-        if (HobbiesRightData) {
-            var HobbiesResult = document.getElementById('HobbiesResult');
-            HobbiesResult.innerHTML = '<h2 class="text-center text-info" style="color:white;margin-bottom:0px;">Your Chances:</h2><br>' + '<h2 style="color:white;">' + HobbiesChance + "%" + '</h2>' + '<hr>' + '<p class="text-left text-info" style="color:white;margin-bottom:0px;">' + HobbiesContent + '</p>';
+        var FinancialChance = localStorage.getItem('FinancialChance');
+        var FinancialContent = localStorage.getItem('FinancialContent');
+        if (FinancialRightData) {
+            var FinancialResult = document.getElementById('FinancialResult');
+            FinancialResult.innerHTML = '<h2 class="text-center text-info" style="color:white;margin-bottom:0px;">Your Chances:</h2><br>' + '<h2 style="color:white;">' + FinancialChance + "%" +  '</h2>' + '<hr>' + '<p class="text-left text-info" style="color:white;margin-bottom:0px;">' + FinancialContent + '</p>';
         }
     </script>
 </body>
