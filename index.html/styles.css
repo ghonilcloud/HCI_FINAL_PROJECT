@@ -6,13 +6,14 @@ p {
 }
 
 h1 {
-  font-size:100px;
+  font-size:70px;
   color:white;
+  font-weight: bolder;
 }
 
 body {
     background-image: url('background.jpg');
-    background-size: 110%;
+    background-size: 150%;
     font-family:'Open Sans';
 }
 
@@ -60,6 +61,8 @@ div {
     margin-left: 40px;
     width: 420px;
     height: 390px;
+    transition-duration: .3s;
+    transition-timing-function: ease-out;
 }
 .divcenter {
     background: rgb(152, 62, 92);
@@ -68,6 +71,8 @@ div {
     margin-right: auto;
     width: 420px;
     height: 390px;
+    transition-duration: .3s;
+    transition-timing-function: ease-out;
 }
 .divcenterbar {
     background: rgb(152, 62, 92);
@@ -75,8 +80,13 @@ div {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
-    width: auto;
+    width: 100%;
     height: auto;
+    border-radius: 0;
+}
+
+.divleft:hover, .divcenter:hover, .divright:hover, .divstartbar:hover, .button:hover, .divcalculate:hover {
+  transform: scale(1.07);
 }
 
 .divcalculate {
@@ -86,8 +96,11 @@ div {
   margin-left: auto;
   margin-right: auto;
   margin-top: 930px;
-  width: 330px;
-  height: 90px;
+  width: 360px;
+  height: 80px;
+  border-radius: 18px;
+  transition-duration: .3s;
+  transition-timing-function: ease-out;
 }
 .divoverall {
   background: rgb(152, 62, 92);
@@ -106,8 +119,11 @@ div {
   margin-right: auto;
   margin-bottom: 30px;
   margin-top: 40px;
-  width: 20%;
-  height: 2%;
+  width: 180px;
+  height: 80px;
+  border-radius: 16px;
+  transition-duration: .3s;
+  transition-timing-function: ease-out;
 }
 .divright {
     background: rgb(152, 62, 92);
@@ -115,6 +131,8 @@ div {
     margin-right: 40px;
     width: 420px;
     height: 390px;
+    transition-duration: .3s;
+    transition-timing-function: ease-out;
 }
 
 .divrighthalfinput {
@@ -176,176 +194,120 @@ div {
 }
 
 .button {
-    border-radius: 10px;
-    border: none;
-    color: #FFFFFF;
-    background-color: rgb(196, 80, 98);
-    text-align: center;
-    font-size: 16px;
-    font-family:'Open Sans';
-    padding: 20px;
-    width: 210px;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin-bottom: 4px;
-  }
-  
-  .button span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-  }
-  
-  .button span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-  }
-  
-  .button:hover span {
-    padding-right: 25px;
-  }
-  
-  .button:hover span:after {
-    opacity: 1;
-    right: 0;
-  }
+  border-radius: 10px;
+  border: none;
+  color: #FFFFFF;
+  background-color: rgb(196, 80, 98);
+  text-align: center;
+  font-size: 14px;
+  font-family:'Open Sans';
+  width: 130px;
+  height: 50px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-bottom: 4px;
+  transition-duration: .3s;
+  transition-timing-function: ease-out;
+}
 
-  #panel, #flip {
-    padding: 5px;
-    text-align: left;
-    border: solid 1px #c3c3c3;
-    color: white;
-    cursor: pointer;
-  }
-  
-  #panel {
-    padding: 20px;
-    display: none;
-  }
-  
-  #panel2, #flip2 {
-    padding: 5px;
-    text-align: left;
-    border: solid 1px #c3c3c3;
-    color: white;
-    cursor: pointer;
-  }
-  
-  #panel2 {
-    padding: 20px;
-    display: none;
-  }
-  
-  #panel3, #flip3 {
-    padding: 5px;
-    text-align: left;
-    border: solid 1px #c3c3c3;
-    color: white;
-    cursor: pointer;
-  }
-  
-  #panel3 {
-    padding: 20px;
-    display: none;
-  }
-  
-  #panel4, #flip4 {
-    padding: 5px;
-    text-align: left;
-    border: solid 1px #c3c3c3;
-    color: white;
-    cursor: pointer;
-  }
-  
-  #panel4 {
-    padding: 20px;
-    display: none;
-  }
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
 
-  #panel5, #flip5 {
-    padding: 5px;
-    text-align: left;
-    border: solid 1px #c3c3c3;
-    color: white;
-    cursor: pointer;
-  }
-  
-  #panel5 {
-    padding: 20px;
-    display: none;
-  }
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
 
-  #panel6, #flip6 {
-    padding: 5px;
-    text-align: left;
-    border: solid 1px #c3c3c3;
-    color: white;
-    cursor: pointer;
-  }
-  
-  #panel6 {
-    padding: 20px;
-    display: none;
-  }
+.button:hover span {
+  padding-right: 25px;
+}
 
-  #panel7, #flip7 {
-    padding: 5px;
-    text-align: left;
-    border: solid 1px #c3c3c3;
-    color: white;
-    cursor: pointer;
-  }
-  
-  #panel7 {
-    padding: 20px;
-    display: none;
-  }
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
 
-  #panel8, #flip8 {
-    padding: 5px;
-    text-align: left;
-    border: solid 1px #c3c3c3;
-    color: white;
-    cursor: pointer;
-  }
-  
-  #panel8 {
-    padding: 20px;
-    display: none;
-  }
+#panel, #flip {
+  padding: 5px;
+  text-align: left;
+  border: solid 1px #c3c3c3;
+  color: white;
+  cursor: pointer;
+}
 
-  #panel9, #flip9 {
-    padding: 5px;
-    text-align: left;
-    border: solid 1px #c3c3c3;
-    color: white;
-    cursor: pointer;
-  }
-  
-  #panel9 {
-    padding: 20px;
-    display: none;
-  }
+#flip, 
+#flip2, 
+#flip3, 
+#flip4, 
+#flip5,
+#flip6,
+#flip7,
+#flip8,
+#flip9,
+#flip10 {
+  display: flex !important;
+  justify-content: space-between !important;
+}
 
-  #panel10, #flip10 {
-    padding: 5px;
-    text-align: left;
-    border: solid 1px #c3c3c3;
-    color: white;
-    cursor: pointer;
-  }
-  
-  #panel10 {
-    padding: 20px;
-    display: none;
-  }
+.icon {
+  display: inline-block;
+}
 
-  @media (max-width: 600px) { 
+.down {
+  width: 2rem;
+  filter: invert(1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.down.clicked {
+  transform: rotate(180deg);
+}
+
+
+#panel, #flip,
+#panel2, #flip2,
+#panel3, #flip3,
+#panel4, #flip4,
+#panel5, #flip5,
+#panel6, #flip6,
+#panel7, #flip7,
+#panel8, #flip8,
+#panel9, #flip9,
+#panel10, #flip10 {
+  padding: 5px;
+  text-align: left;
+  border: solid 1px #c3c3c3;
+  color: white;
+  cursor: pointer;
+}
+
+#panel,
+#panel2,
+#panel3,
+#panel4,
+#panel5,
+#panel6,
+#panel7,
+#panel8,
+#panel9,
+#panel10 {
+  padding: 20px;
+  display: none;
+}
+  
+.divbanner span {
+  font-weight: bold;
+}
+
+@media (max-width: 600px) { 
   h1 {
     font-size:60px;
     color:white;
@@ -408,7 +370,7 @@ div {
     margin-bottom: 30px;
     width: auto;
     height: auto;
-}
+  }
 
   .divrighthalfinput {
     background: rgb(152, 62, 92);
