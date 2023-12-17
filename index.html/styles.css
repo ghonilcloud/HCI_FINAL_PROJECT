@@ -119,8 +119,8 @@ div {
   margin-right: auto;
   margin-bottom: 30px;
   margin-top: 40px;
-  width: 270px;
-  height: 80px;
+  width: 20%;
+  height: 2%;
   border-radius: 16px;
   transition-duration: .3s;
   transition-timing-function: ease-out;
