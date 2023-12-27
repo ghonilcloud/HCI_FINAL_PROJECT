@@ -1,3 +1,5 @@
+Our Update Week 13 report, based on Mr. Bagus's Feedback: https://docs.google.com/document/d/1uEe-q-N-Qq8ZPGxq0iOPPRs6SQBmjeeKTszAk8u_xkg/edit?usp=sharing
+
 Welcome to the Meticulous Love Calculator, where we delve into the intricacies of compatibility to give you an approximate percentage of your chances for true love. Our calculations are based on various factors, including MBTI personality types, hobbies, goals, financial situations, religion, and ethnicity.
 
 How to Use
@@ -26,5 +28,3 @@ Spread the Love
 Share the Meticulous Love Calculator with your friends and on social media. It's a fun way to engage with the intricacies of relationships and explore compatibility in a lighthearted manner.
 
 Remember, while the Meticulous Love Calculator adds an entertaining element to the journey of love, the real magic happens through genuine connection, understanding, and shared experiences in your relationship. Enjoy the process, and may your love story be as unique as you are!
-
-Our Update Week 13 report, based on Mr. Bagus's Feedback: https://docs.google.com/document/d/1uEe-q-N-Qq8ZPGxq0iOPPRs6SQBmjeeKTszAk8u_xkg/edit?usp=sharing
